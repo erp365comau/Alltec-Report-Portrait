@@ -1,0 +1,2170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>aef38e7a-ec25-4925-8de2-2b7a93073374</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.76109in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.00925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.00925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.00925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.00925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.00925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.70092in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.90925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.98425in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.90925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.50833in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.15925in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.90925in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.23622in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>No.</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Description</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox10">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Inventory</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Inventory NSW</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Inventory VIC</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox13">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Inventory QLD</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Inventory WA</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Base UOM</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">COG</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Last Direct Cost</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Retail COG</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox15">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Unit Price</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Inventory Posting Group</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Annual Sales Total</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Constant">Months Stock</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="No_Item">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!No_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>No_Item</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Description_Item">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Description_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Description_Item</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox38">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Inventory_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EN_InventoryNSW__.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EN_InventoryVIC__.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox19">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EN_InventoryQLD__.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EN_InventoryWA__.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="BaseUnitofMeasure_Item">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!BaseUnitofMeasure_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>BaseUnitofMeasure_Item</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox27">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Inventory_Item.Value * Fields!LastDirectCost_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="LastDirectCost_Item">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LastDirectCost_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>LastDirectCost_Item</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="UnitCost_Item">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Inventory_Item.Value * Fields!UnitPrice_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>UnitCost_Item</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox28">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UnitPrice_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox29">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!InventoryPostingGroup_Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox32">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!AnnualUsage__.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox33">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Code.CalcMonthsStock(Fields!AnnualUsage__.Value,Fields!Inventory_Item.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8.5pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Height>0.48622in</Height>
+            <Width>16.38784in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>1.235cm</Height>
+        <Style />
+      </Body>
+      <Width>41.62512cm</Width>
+      <Page>
+        <PageHeight>21cm</PageHeight>
+        <PageWidth>29.7cm</PageWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>1cm</BottomMargin>
+        <ColumnSpacing>1.27cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function CalcMonthsStock(ByVal AnnualUsage As Decimal,ByVal Inventory As Decimal)
+    if AnnualUsage = 0 then
+        Return 0
+    end if
+    Return ((Inventory / AnnualUsage) * 12)
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_Item">
+          <DataField>No_Item</DataField>
+        </Field>
+        <Field Name="No2_Item">
+          <DataField>No2_Item</DataField>
+        </Field>
+        <Field Name="Description_Item">
+          <DataField>Description_Item</DataField>
+        </Field>
+        <Field Name="SearchDescription_Item">
+          <DataField>SearchDescription_Item</DataField>
+        </Field>
+        <Field Name="Description2_Item">
+          <DataField>Description2_Item</DataField>
+        </Field>
+        <Field Name="AssemblyBOM_Item">
+          <DataField>AssemblyBOM_Item</DataField>
+        </Field>
+        <Field Name="BaseUnitofMeasure_Item">
+          <DataField>BaseUnitofMeasure_Item</DataField>
+        </Field>
+        <Field Name="PriceUnitConversion_Item">
+          <DataField>PriceUnitConversion_Item</DataField>
+        </Field>
+        <Field Name="Type_Item">
+          <DataField>Type_Item</DataField>
+        </Field>
+        <Field Name="InventoryPostingGroup_Item">
+          <DataField>InventoryPostingGroup_Item</DataField>
+        </Field>
+        <Field Name="ShelfNo_Item">
+          <DataField>ShelfNo_Item</DataField>
+        </Field>
+        <Field Name="ItemDiscGroup_Item">
+          <DataField>ItemDiscGroup_Item</DataField>
+        </Field>
+        <Field Name="AllowInvoiceDisc_Item">
+          <DataField>AllowInvoiceDisc_Item</DataField>
+        </Field>
+        <Field Name="StatisticsGroup_Item">
+          <DataField>StatisticsGroup_Item</DataField>
+        </Field>
+        <Field Name="CommissionGroup_Item">
+          <DataField>CommissionGroup_Item</DataField>
+        </Field>
+        <Field Name="UnitPrice_Item">
+          <DataField>UnitPrice_Item</DataField>
+        </Field>
+        <Field Name="UnitPrice_ItemFormat">
+          <DataField>UnitPrice_ItemFormat</DataField>
+        </Field>
+        <Field Name="PriceProfitCalculation_Item">
+          <DataField>PriceProfitCalculation_Item</DataField>
+        </Field>
+        <Field Name="Profit_Item">
+          <DataField>Profit_Item</DataField>
+        </Field>
+        <Field Name="Profit_ItemFormat">
+          <DataField>Profit_ItemFormat</DataField>
+        </Field>
+        <Field Name="CostingMethod_Item">
+          <DataField>CostingMethod_Item</DataField>
+        </Field>
+        <Field Name="UnitCost_Item">
+          <DataField>UnitCost_Item</DataField>
+        </Field>
+        <Field Name="UnitCost_ItemFormat">
+          <DataField>UnitCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="StandardCost_Item">
+          <DataField>StandardCost_Item</DataField>
+        </Field>
+        <Field Name="StandardCost_ItemFormat">
+          <DataField>StandardCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="LastDirectCost_Item">
+          <DataField>LastDirectCost_Item</DataField>
+        </Field>
+        <Field Name="LastDirectCost_ItemFormat">
+          <DataField>LastDirectCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="IndirectCost_Item">
+          <DataField>IndirectCost_Item</DataField>
+        </Field>
+        <Field Name="IndirectCost_ItemFormat">
+          <DataField>IndirectCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="CostisAdjusted_Item">
+          <DataField>CostisAdjusted_Item</DataField>
+        </Field>
+        <Field Name="AllowOnlineAdjustment_Item">
+          <DataField>AllowOnlineAdjustment_Item</DataField>
+        </Field>
+        <Field Name="VendorNo_Item">
+          <DataField>VendorNo_Item</DataField>
+        </Field>
+        <Field Name="VendorItemNo_Item">
+          <DataField>VendorItemNo_Item</DataField>
+        </Field>
+        <Field Name="LeadTimeCalculation_Item">
+          <DataField>LeadTimeCalculation_Item</DataField>
+        </Field>
+        <Field Name="ReorderPoint_Item">
+          <DataField>ReorderPoint_Item</DataField>
+        </Field>
+        <Field Name="ReorderPoint_ItemFormat">
+          <DataField>ReorderPoint_ItemFormat</DataField>
+        </Field>
+        <Field Name="MaximumInventory_Item">
+          <DataField>MaximumInventory_Item</DataField>
+        </Field>
+        <Field Name="MaximumInventory_ItemFormat">
+          <DataField>MaximumInventory_ItemFormat</DataField>
+        </Field>
+        <Field Name="ReorderQuantity_Item">
+          <DataField>ReorderQuantity_Item</DataField>
+        </Field>
+        <Field Name="ReorderQuantity_ItemFormat">
+          <DataField>ReorderQuantity_ItemFormat</DataField>
+        </Field>
+        <Field Name="AlternativeItemNo_Item">
+          <DataField>AlternativeItemNo_Item</DataField>
+        </Field>
+        <Field Name="UnitListPrice_Item">
+          <DataField>UnitListPrice_Item</DataField>
+        </Field>
+        <Field Name="UnitListPrice_ItemFormat">
+          <DataField>UnitListPrice_ItemFormat</DataField>
+        </Field>
+        <Field Name="DutyDue_Item">
+          <DataField>DutyDue_Item</DataField>
+        </Field>
+        <Field Name="DutyDue_ItemFormat">
+          <DataField>DutyDue_ItemFormat</DataField>
+        </Field>
+        <Field Name="DutyCode_Item">
+          <DataField>DutyCode_Item</DataField>
+        </Field>
+        <Field Name="GrossWeight_Item">
+          <DataField>GrossWeight_Item</DataField>
+        </Field>
+        <Field Name="GrossWeight_ItemFormat">
+          <DataField>GrossWeight_ItemFormat</DataField>
+        </Field>
+        <Field Name="NetWeight_Item">
+          <DataField>NetWeight_Item</DataField>
+        </Field>
+        <Field Name="NetWeight_ItemFormat">
+          <DataField>NetWeight_ItemFormat</DataField>
+        </Field>
+        <Field Name="UnitsperParcel_Item">
+          <DataField>UnitsperParcel_Item</DataField>
+        </Field>
+        <Field Name="UnitsperParcel_ItemFormat">
+          <DataField>UnitsperParcel_ItemFormat</DataField>
+        </Field>
+        <Field Name="UnitVolume_Item">
+          <DataField>UnitVolume_Item</DataField>
+        </Field>
+        <Field Name="UnitVolume_ItemFormat">
+          <DataField>UnitVolume_ItemFormat</DataField>
+        </Field>
+        <Field Name="Durability_Item">
+          <DataField>Durability_Item</DataField>
+        </Field>
+        <Field Name="FreightType_Item">
+          <DataField>FreightType_Item</DataField>
+        </Field>
+        <Field Name="TariffNo_Item">
+          <DataField>TariffNo_Item</DataField>
+        </Field>
+        <Field Name="DutyUnitConversion_Item">
+          <DataField>DutyUnitConversion_Item</DataField>
+        </Field>
+        <Field Name="DutyUnitConversion_ItemFormat">
+          <DataField>DutyUnitConversion_ItemFormat</DataField>
+        </Field>
+        <Field Name="CountryRegionPurchasedCode_Item">
+          <DataField>CountryRegionPurchasedCode_Item</DataField>
+        </Field>
+        <Field Name="BudgetQuantity_Item">
+          <DataField>BudgetQuantity_Item</DataField>
+        </Field>
+        <Field Name="BudgetQuantity_ItemFormat">
+          <DataField>BudgetQuantity_ItemFormat</DataField>
+        </Field>
+        <Field Name="BudgetedAmount_Item">
+          <DataField>BudgetedAmount_Item</DataField>
+        </Field>
+        <Field Name="BudgetedAmount_ItemFormat">
+          <DataField>BudgetedAmount_ItemFormat</DataField>
+        </Field>
+        <Field Name="BudgetProfit_Item">
+          <DataField>BudgetProfit_Item</DataField>
+        </Field>
+        <Field Name="BudgetProfit_ItemFormat">
+          <DataField>BudgetProfit_ItemFormat</DataField>
+        </Field>
+        <Field Name="Comment_Item">
+          <DataField>Comment_Item</DataField>
+        </Field>
+        <Field Name="Blocked_Item">
+          <DataField>Blocked_Item</DataField>
+        </Field>
+        <Field Name="CostisPostedtoGL_Item">
+          <DataField>CostisPostedtoGL_Item</DataField>
+        </Field>
+        <Field Name="BlockReason_Item">
+          <DataField>BlockReason_Item</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_Item">
+          <DataField>LastDateTimeModified_Item</DataField>
+        </Field>
+        <Field Name="LastDateModified_Item">
+          <DataField>LastDateModified_Item</DataField>
+        </Field>
+        <Field Name="LastTimeModified_Item">
+          <DataField>LastTimeModified_Item</DataField>
+        </Field>
+        <Field Name="DateFilter_Item">
+          <DataField>DateFilter_Item</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Filter_Item">
+          <DataField>GlobalDimension1Filter_Item</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Filter_Item">
+          <DataField>GlobalDimension2Filter_Item</DataField>
+        </Field>
+        <Field Name="LocationFilter_Item">
+          <DataField>LocationFilter_Item</DataField>
+        </Field>
+        <Field Name="Inventory_Item">
+          <DataField>Inventory_Item</DataField>
+        </Field>
+        <Field Name="Inventory_ItemFormat">
+          <DataField>Inventory_ItemFormat</DataField>
+        </Field>
+        <Field Name="NetInvoicedQty_Item">
+          <DataField>NetInvoicedQty_Item</DataField>
+        </Field>
+        <Field Name="NetInvoicedQty_ItemFormat">
+          <DataField>NetInvoicedQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="NetChange_Item">
+          <DataField>NetChange_Item</DataField>
+        </Field>
+        <Field Name="NetChange_ItemFormat">
+          <DataField>NetChange_ItemFormat</DataField>
+        </Field>
+        <Field Name="PurchasesQty_Item">
+          <DataField>PurchasesQty_Item</DataField>
+        </Field>
+        <Field Name="PurchasesQty_ItemFormat">
+          <DataField>PurchasesQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="SalesQty_Item">
+          <DataField>SalesQty_Item</DataField>
+        </Field>
+        <Field Name="SalesQty_ItemFormat">
+          <DataField>SalesQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PositiveAdjmtQty_Item">
+          <DataField>PositiveAdjmtQty_Item</DataField>
+        </Field>
+        <Field Name="PositiveAdjmtQty_ItemFormat">
+          <DataField>PositiveAdjmtQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="NegativeAdjmtQty_Item">
+          <DataField>NegativeAdjmtQty_Item</DataField>
+        </Field>
+        <Field Name="NegativeAdjmtQty_ItemFormat">
+          <DataField>NegativeAdjmtQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PurchasesLCY_Item">
+          <DataField>PurchasesLCY_Item</DataField>
+        </Field>
+        <Field Name="PurchasesLCY_ItemFormat">
+          <DataField>PurchasesLCY_ItemFormat</DataField>
+        </Field>
+        <Field Name="SalesLCY_Item">
+          <DataField>SalesLCY_Item</DataField>
+        </Field>
+        <Field Name="SalesLCY_ItemFormat">
+          <DataField>SalesLCY_ItemFormat</DataField>
+        </Field>
+        <Field Name="PositiveAdjmtLCY_Item">
+          <DataField>PositiveAdjmtLCY_Item</DataField>
+        </Field>
+        <Field Name="PositiveAdjmtLCY_ItemFormat">
+          <DataField>PositiveAdjmtLCY_ItemFormat</DataField>
+        </Field>
+        <Field Name="NegativeAdjmtLCY_Item">
+          <DataField>NegativeAdjmtLCY_Item</DataField>
+        </Field>
+        <Field Name="NegativeAdjmtLCY_ItemFormat">
+          <DataField>NegativeAdjmtLCY_ItemFormat</DataField>
+        </Field>
+        <Field Name="COGSLCY_Item">
+          <DataField>COGSLCY_Item</DataField>
+        </Field>
+        <Field Name="COGSLCY_ItemFormat">
+          <DataField>COGSLCY_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonPurchOrder_Item">
+          <DataField>QtyonPurchOrder_Item</DataField>
+        </Field>
+        <Field Name="QtyonPurchOrder_ItemFormat">
+          <DataField>QtyonPurchOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonSalesOrder_Item">
+          <DataField>QtyonSalesOrder_Item</DataField>
+        </Field>
+        <Field Name="QtyonSalesOrder_ItemFormat">
+          <DataField>QtyonSalesOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="PriceIncludesVAT_Item">
+          <DataField>PriceIncludesVAT_Item</DataField>
+        </Field>
+        <Field Name="DropShipmentFilter_Item">
+          <DataField>DropShipmentFilter_Item</DataField>
+        </Field>
+        <Field Name="VATBusPostingGrPrice_Item">
+          <DataField>VATBusPostingGrPrice_Item</DataField>
+        </Field>
+        <Field Name="GenProdPostingGroup_Item">
+          <DataField>GenProdPostingGroup_Item</DataField>
+        </Field>
+        <Field Name="Picture_Item">
+          <DataField>Picture_Item</DataField>
+        </Field>
+        <Field Name="TransferredQty_Item">
+          <DataField>TransferredQty_Item</DataField>
+        </Field>
+        <Field Name="TransferredQty_ItemFormat">
+          <DataField>TransferredQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="TransferredLCY_Item">
+          <DataField>TransferredLCY_Item</DataField>
+        </Field>
+        <Field Name="TransferredLCY_ItemFormat">
+          <DataField>TransferredLCY_ItemFormat</DataField>
+        </Field>
+        <Field Name="CountryRegionofOriginCode_Item">
+          <DataField>CountryRegionofOriginCode_Item</DataField>
+        </Field>
+        <Field Name="AutomaticExtTexts_Item">
+          <DataField>AutomaticExtTexts_Item</DataField>
+        </Field>
+        <Field Name="NoSeries_Item">
+          <DataField>NoSeries_Item</DataField>
+        </Field>
+        <Field Name="TaxGroupCode_Item">
+          <DataField>TaxGroupCode_Item</DataField>
+        </Field>
+        <Field Name="VATProdPostingGroup_Item">
+          <DataField>VATProdPostingGroup_Item</DataField>
+        </Field>
+        <Field Name="Reserve_Item">
+          <DataField>Reserve_Item</DataField>
+        </Field>
+        <Field Name="ReservedQtyonInventory_Item">
+          <DataField>ReservedQtyonInventory_Item</DataField>
+        </Field>
+        <Field Name="ReservedQtyonInventory_ItemFormat">
+          <DataField>ReservedQtyonInventory_ItemFormat</DataField>
+        </Field>
+        <Field Name="ReservedQtyonPurchOrders_Item">
+          <DataField>ReservedQtyonPurchOrders_Item</DataField>
+        </Field>
+        <Field Name="ReservedQtyonPurchOrders_ItemFormat">
+          <DataField>ReservedQtyonPurchOrders_ItemFormat</DataField>
+        </Field>
+        <Field Name="ReservedQtyonSalesOrders_Item">
+          <DataField>ReservedQtyonSalesOrders_Item</DataField>
+        </Field>
+        <Field Name="ReservedQtyonSalesOrders_ItemFormat">
+          <DataField>ReservedQtyonSalesOrders_ItemFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_Item">
+          <DataField>GlobalDimension1Code_Item</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_Item">
+          <DataField>GlobalDimension2Code_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonOutboundTransfer_Item">
+          <DataField>ResQtyonOutboundTransfer_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonOutboundTransfer_ItemFormat">
+          <DataField>ResQtyonOutboundTransfer_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonInboundTransfer_Item">
+          <DataField>ResQtyonInboundTransfer_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonInboundTransfer_ItemFormat">
+          <DataField>ResQtyonInboundTransfer_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonSalesReturns_Item">
+          <DataField>ResQtyonSalesReturns_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonSalesReturns_ItemFormat">
+          <DataField>ResQtyonSalesReturns_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonPurchReturns_Item">
+          <DataField>ResQtyonPurchReturns_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonPurchReturns_ItemFormat">
+          <DataField>ResQtyonPurchReturns_ItemFormat</DataField>
+        </Field>
+        <Field Name="StockoutWarning_Item">
+          <DataField>StockoutWarning_Item</DataField>
+        </Field>
+        <Field Name="PreventNegativeInventory_Item">
+          <DataField>PreventNegativeInventory_Item</DataField>
+        </Field>
+        <Field Name="CostofOpenProductionOrders_Item">
+          <DataField>CostofOpenProductionOrders_Item</DataField>
+        </Field>
+        <Field Name="CostofOpenProductionOrders_ItemFormat">
+          <DataField>CostofOpenProductionOrders_ItemFormat</DataField>
+        </Field>
+        <Field Name="ApplicationWkshUserID_Item">
+          <DataField>ApplicationWkshUserID_Item</DataField>
+        </Field>
+        <Field Name="AssemblyPolicy_Item">
+          <DataField>AssemblyPolicy_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonAssemblyOrder_Item">
+          <DataField>ResQtyonAssemblyOrder_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonAssemblyOrder_ItemFormat">
+          <DataField>ResQtyonAssemblyOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonAsmComp_Item">
+          <DataField>ResQtyonAsmComp_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonAsmComp_ItemFormat">
+          <DataField>ResQtyonAsmComp_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonAssemblyOrder_Item">
+          <DataField>QtyonAssemblyOrder_Item</DataField>
+        </Field>
+        <Field Name="QtyonAssemblyOrder_ItemFormat">
+          <DataField>QtyonAssemblyOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonAsmComponent_Item">
+          <DataField>QtyonAsmComponent_Item</DataField>
+        </Field>
+        <Field Name="QtyonAsmComponent_ItemFormat">
+          <DataField>QtyonAsmComponent_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonJobOrder_Item">
+          <DataField>QtyonJobOrder_Item</DataField>
+        </Field>
+        <Field Name="QtyonJobOrder_ItemFormat">
+          <DataField>QtyonJobOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonJobOrder_Item">
+          <DataField>ResQtyonJobOrder_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonJobOrder_ItemFormat">
+          <DataField>ResQtyonJobOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="GTIN_Item">
+          <DataField>GTIN_Item</DataField>
+        </Field>
+        <Field Name="DefaultDeferralTemplateCode_Item">
+          <DataField>DefaultDeferralTemplateCode_Item</DataField>
+        </Field>
+        <Field Name="LowLevelCode_Item">
+          <DataField>LowLevelCode_Item</DataField>
+        </Field>
+        <Field Name="LotSize_Item">
+          <DataField>LotSize_Item</DataField>
+        </Field>
+        <Field Name="LotSize_ItemFormat">
+          <DataField>LotSize_ItemFormat</DataField>
+        </Field>
+        <Field Name="SerialNos_Item">
+          <DataField>SerialNos_Item</DataField>
+        </Field>
+        <Field Name="LastUnitCostCalcDate_Item">
+          <DataField>LastUnitCostCalcDate_Item</DataField>
+        </Field>
+        <Field Name="RolledupMaterialCost_Item">
+          <DataField>RolledupMaterialCost_Item</DataField>
+        </Field>
+        <Field Name="RolledupMaterialCost_ItemFormat">
+          <DataField>RolledupMaterialCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="RolledupCapacityCost_Item">
+          <DataField>RolledupCapacityCost_Item</DataField>
+        </Field>
+        <Field Name="RolledupCapacityCost_ItemFormat">
+          <DataField>RolledupCapacityCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="Scrap_Item">
+          <DataField>Scrap_Item</DataField>
+        </Field>
+        <Field Name="Scrap_ItemFormat">
+          <DataField>Scrap_ItemFormat</DataField>
+        </Field>
+        <Field Name="InventoryValueZero_Item">
+          <DataField>InventoryValueZero_Item</DataField>
+        </Field>
+        <Field Name="DiscreteOrderQuantity_Item">
+          <DataField>DiscreteOrderQuantity_Item</DataField>
+        </Field>
+        <Field Name="MinimumOrderQuantity_Item">
+          <DataField>MinimumOrderQuantity_Item</DataField>
+        </Field>
+        <Field Name="MinimumOrderQuantity_ItemFormat">
+          <DataField>MinimumOrderQuantity_ItemFormat</DataField>
+        </Field>
+        <Field Name="MaximumOrderQuantity_Item">
+          <DataField>MaximumOrderQuantity_Item</DataField>
+        </Field>
+        <Field Name="MaximumOrderQuantity_ItemFormat">
+          <DataField>MaximumOrderQuantity_ItemFormat</DataField>
+        </Field>
+        <Field Name="SafetyStockQuantity_Item">
+          <DataField>SafetyStockQuantity_Item</DataField>
+        </Field>
+        <Field Name="SafetyStockQuantity_ItemFormat">
+          <DataField>SafetyStockQuantity_ItemFormat</DataField>
+        </Field>
+        <Field Name="OrderMultiple_Item">
+          <DataField>OrderMultiple_Item</DataField>
+        </Field>
+        <Field Name="OrderMultiple_ItemFormat">
+          <DataField>OrderMultiple_ItemFormat</DataField>
+        </Field>
+        <Field Name="SafetyLeadTime_Item">
+          <DataField>SafetyLeadTime_Item</DataField>
+        </Field>
+        <Field Name="FlushingMethod_Item">
+          <DataField>FlushingMethod_Item</DataField>
+        </Field>
+        <Field Name="ReplenishmentSystem_Item">
+          <DataField>ReplenishmentSystem_Item</DataField>
+        </Field>
+        <Field Name="ScheduledReceiptQty_Item">
+          <DataField>ScheduledReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="ScheduledReceiptQty_ItemFormat">
+          <DataField>ScheduledReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="ScheduledNeedQty_Item">
+          <DataField>ScheduledNeedQty_Item</DataField>
+        </Field>
+        <Field Name="ScheduledNeedQty_ItemFormat">
+          <DataField>ScheduledNeedQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="RoundingPrecision_Item">
+          <DataField>RoundingPrecision_Item</DataField>
+        </Field>
+        <Field Name="RoundingPrecision_ItemFormat">
+          <DataField>RoundingPrecision_ItemFormat</DataField>
+        </Field>
+        <Field Name="BinFilter_Item">
+          <DataField>BinFilter_Item</DataField>
+        </Field>
+        <Field Name="VariantFilter_Item">
+          <DataField>VariantFilter_Item</DataField>
+        </Field>
+        <Field Name="SalesUnitofMeasure_Item">
+          <DataField>SalesUnitofMeasure_Item</DataField>
+        </Field>
+        <Field Name="PurchUnitofMeasure_Item">
+          <DataField>PurchUnitofMeasure_Item</DataField>
+        </Field>
+        <Field Name="TimeBucket_Item">
+          <DataField>TimeBucket_Item</DataField>
+        </Field>
+        <Field Name="ReservedQtyonProdOrder_Item">
+          <DataField>ReservedQtyonProdOrder_Item</DataField>
+        </Field>
+        <Field Name="ReservedQtyonProdOrder_ItemFormat">
+          <DataField>ReservedQtyonProdOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonProdOrderComp_Item">
+          <DataField>ResQtyonProdOrderComp_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonProdOrderComp_ItemFormat">
+          <DataField>ResQtyonProdOrderComp_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonReqLine_Item">
+          <DataField>ResQtyonReqLine_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonReqLine_ItemFormat">
+          <DataField>ResQtyonReqLine_ItemFormat</DataField>
+        </Field>
+        <Field Name="ReorderingPolicy_Item">
+          <DataField>ReorderingPolicy_Item</DataField>
+        </Field>
+        <Field Name="IncludeInventory_Item">
+          <DataField>IncludeInventory_Item</DataField>
+        </Field>
+        <Field Name="ManufacturingPolicy_Item">
+          <DataField>ManufacturingPolicy_Item</DataField>
+        </Field>
+        <Field Name="ReschedulingPeriod_Item">
+          <DataField>ReschedulingPeriod_Item</DataField>
+        </Field>
+        <Field Name="LotAccumulationPeriod_Item">
+          <DataField>LotAccumulationPeriod_Item</DataField>
+        </Field>
+        <Field Name="DampenerPeriod_Item">
+          <DataField>DampenerPeriod_Item</DataField>
+        </Field>
+        <Field Name="DampenerQuantity_Item">
+          <DataField>DampenerQuantity_Item</DataField>
+        </Field>
+        <Field Name="DampenerQuantity_ItemFormat">
+          <DataField>DampenerQuantity_ItemFormat</DataField>
+        </Field>
+        <Field Name="OverflowLevel_Item">
+          <DataField>OverflowLevel_Item</DataField>
+        </Field>
+        <Field Name="OverflowLevel_ItemFormat">
+          <DataField>OverflowLevel_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlanningTransferShipQty_Item">
+          <DataField>PlanningTransferShipQty_Item</DataField>
+        </Field>
+        <Field Name="PlanningTransferShipQty_ItemFormat">
+          <DataField>PlanningTransferShipQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlanningWorksheetQty_Item">
+          <DataField>PlanningWorksheetQty_Item</DataField>
+        </Field>
+        <Field Name="PlanningWorksheetQty_ItemFormat">
+          <DataField>PlanningWorksheetQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="StockkeepingUnitExists_Item">
+          <DataField>StockkeepingUnitExists_Item</DataField>
+        </Field>
+        <Field Name="ManufacturerCode_Item">
+          <DataField>ManufacturerCode_Item</DataField>
+        </Field>
+        <Field Name="ItemCategoryCode_Item">
+          <DataField>ItemCategoryCode_Item</DataField>
+        </Field>
+        <Field Name="CreatedFromNonstockItem_Item">
+          <DataField>CreatedFromNonstockItem_Item</DataField>
+        </Field>
+        <Field Name="SubstitutesExist_Item">
+          <DataField>SubstitutesExist_Item</DataField>
+        </Field>
+        <Field Name="QtyinTransit_Item">
+          <DataField>QtyinTransit_Item</DataField>
+        </Field>
+        <Field Name="QtyinTransit_ItemFormat">
+          <DataField>QtyinTransit_ItemFormat</DataField>
+        </Field>
+        <Field Name="TransOrdReceiptQty_Item">
+          <DataField>TransOrdReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="TransOrdReceiptQty_ItemFormat">
+          <DataField>TransOrdReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="TransOrdShipmentQty_Item">
+          <DataField>TransOrdShipmentQty_Item</DataField>
+        </Field>
+        <Field Name="TransOrdShipmentQty_ItemFormat">
+          <DataField>TransOrdShipmentQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyAssignedtoship_Item">
+          <DataField>QtyAssignedtoship_Item</DataField>
+        </Field>
+        <Field Name="QtyAssignedtoship_ItemFormat">
+          <DataField>QtyAssignedtoship_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyPicked_Item">
+          <DataField>QtyPicked_Item</DataField>
+        </Field>
+        <Field Name="QtyPicked_ItemFormat">
+          <DataField>QtyPicked_ItemFormat</DataField>
+        </Field>
+        <Field Name="ServiceItemGroup_Item">
+          <DataField>ServiceItemGroup_Item</DataField>
+        </Field>
+        <Field Name="QtyonServiceOrder_Item">
+          <DataField>QtyonServiceOrder_Item</DataField>
+        </Field>
+        <Field Name="QtyonServiceOrder_ItemFormat">
+          <DataField>QtyonServiceOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="ResQtyonServiceOrders_Item">
+          <DataField>ResQtyonServiceOrders_Item</DataField>
+        </Field>
+        <Field Name="ResQtyonServiceOrders_ItemFormat">
+          <DataField>ResQtyonServiceOrders_ItemFormat</DataField>
+        </Field>
+        <Field Name="ItemTrackingCode_Item">
+          <DataField>ItemTrackingCode_Item</DataField>
+        </Field>
+        <Field Name="LotNos_Item">
+          <DataField>LotNos_Item</DataField>
+        </Field>
+        <Field Name="ExpirationCalculation_Item">
+          <DataField>ExpirationCalculation_Item</DataField>
+        </Field>
+        <Field Name="LotNoFilter_Item">
+          <DataField>LotNoFilter_Item</DataField>
+        </Field>
+        <Field Name="SerialNoFilter_Item">
+          <DataField>SerialNoFilter_Item</DataField>
+        </Field>
+        <Field Name="QtyonPurchReturn_Item">
+          <DataField>QtyonPurchReturn_Item</DataField>
+        </Field>
+        <Field Name="QtyonPurchReturn_ItemFormat">
+          <DataField>QtyonPurchReturn_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonSalesReturn_Item">
+          <DataField>QtyonSalesReturn_Item</DataField>
+        </Field>
+        <Field Name="QtyonSalesReturn_ItemFormat">
+          <DataField>QtyonSalesReturn_ItemFormat</DataField>
+        </Field>
+        <Field Name="NoofSubstitutes_Item">
+          <DataField>NoofSubstitutes_Item</DataField>
+        </Field>
+        <Field Name="WarehouseClassCode_Item">
+          <DataField>WarehouseClassCode_Item</DataField>
+        </Field>
+        <Field Name="SpecialEquipmentCode_Item">
+          <DataField>SpecialEquipmentCode_Item</DataField>
+        </Field>
+        <Field Name="PutawayTemplateCode_Item">
+          <DataField>PutawayTemplateCode_Item</DataField>
+        </Field>
+        <Field Name="PutawayUnitofMeasureCode_Item">
+          <DataField>PutawayUnitofMeasureCode_Item</DataField>
+        </Field>
+        <Field Name="PhysInvtCountingPeriodCode_Item">
+          <DataField>PhysInvtCountingPeriodCode_Item</DataField>
+        </Field>
+        <Field Name="LastCountingPeriodUpdate_Item">
+          <DataField>LastCountingPeriodUpdate_Item</DataField>
+        </Field>
+        <Field Name="LastPhysInvtDate_Item">
+          <DataField>LastPhysInvtDate_Item</DataField>
+        </Field>
+        <Field Name="UseCrossDocking_Item">
+          <DataField>UseCrossDocking_Item</DataField>
+        </Field>
+        <Field Name="NextCountingStartDate_Item">
+          <DataField>NextCountingStartDate_Item</DataField>
+        </Field>
+        <Field Name="NextCountingEndDate_Item">
+          <DataField>NextCountingEndDate_Item</DataField>
+        </Field>
+        <Field Name="IdentifierCode_Item">
+          <DataField>IdentifierCode_Item</DataField>
+        </Field>
+        <Field Name="UnitofMeasureId_Item">
+          <DataField>UnitofMeasureId_Item</DataField>
+        </Field>
+        <Field Name="TaxGroupId_Item">
+          <DataField>TaxGroupId_Item</DataField>
+        </Field>
+        <Field Name="WHTProductPostingGroup_Item">
+          <DataField>WHTProductPostingGroup_Item</DataField>
+        </Field>
+        <Field Name="RoutingNo_Item">
+          <DataField>RoutingNo_Item</DataField>
+        </Field>
+        <Field Name="ProductionBOMNo_Item">
+          <DataField>ProductionBOMNo_Item</DataField>
+        </Field>
+        <Field Name="SingleLevelMaterialCost_Item">
+          <DataField>SingleLevelMaterialCost_Item</DataField>
+        </Field>
+        <Field Name="SingleLevelMaterialCost_ItemFormat">
+          <DataField>SingleLevelMaterialCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelCapacityCost_Item">
+          <DataField>SingleLevelCapacityCost_Item</DataField>
+        </Field>
+        <Field Name="SingleLevelCapacityCost_ItemFormat">
+          <DataField>SingleLevelCapacityCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelSubcontrdCost_Item">
+          <DataField>SingleLevelSubcontrdCost_Item</DataField>
+        </Field>
+        <Field Name="SingleLevelSubcontrdCost_ItemFormat">
+          <DataField>SingleLevelSubcontrdCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelCapOvhdCost_Item">
+          <DataField>SingleLevelCapOvhdCost_Item</DataField>
+        </Field>
+        <Field Name="SingleLevelCapOvhdCost_ItemFormat">
+          <DataField>SingleLevelCapOvhdCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelMfgOvhdCost_Item">
+          <DataField>SingleLevelMfgOvhdCost_Item</DataField>
+        </Field>
+        <Field Name="SingleLevelMfgOvhdCost_ItemFormat">
+          <DataField>SingleLevelMfgOvhdCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="OverheadRate_Item">
+          <DataField>OverheadRate_Item</DataField>
+        </Field>
+        <Field Name="OverheadRate_ItemFormat">
+          <DataField>OverheadRate_ItemFormat</DataField>
+        </Field>
+        <Field Name="RolledupSubcontractedCost_Item">
+          <DataField>RolledupSubcontractedCost_Item</DataField>
+        </Field>
+        <Field Name="RolledupSubcontractedCost_ItemFormat">
+          <DataField>RolledupSubcontractedCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="RolledupMfgOvhdCost_Item">
+          <DataField>RolledupMfgOvhdCost_Item</DataField>
+        </Field>
+        <Field Name="RolledupMfgOvhdCost_ItemFormat">
+          <DataField>RolledupMfgOvhdCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="RolledupCapOverheadCost_Item">
+          <DataField>RolledupCapOverheadCost_Item</DataField>
+        </Field>
+        <Field Name="RolledupCapOverheadCost_ItemFormat">
+          <DataField>RolledupCapOverheadCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlanningIssuesQty_Item">
+          <DataField>PlanningIssuesQty_Item</DataField>
+        </Field>
+        <Field Name="PlanningIssuesQty_ItemFormat">
+          <DataField>PlanningIssuesQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlanningReceiptQty_Item">
+          <DataField>PlanningReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="PlanningReceiptQty_ItemFormat">
+          <DataField>PlanningReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlannedOrderReceiptQty_Item">
+          <DataField>PlannedOrderReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="PlannedOrderReceiptQty_ItemFormat">
+          <DataField>PlannedOrderReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="FPOrderReceiptQty_Item">
+          <DataField>FPOrderReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="FPOrderReceiptQty_ItemFormat">
+          <DataField>FPOrderReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="RelOrderReceiptQty_Item">
+          <DataField>RelOrderReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="RelOrderReceiptQty_ItemFormat">
+          <DataField>RelOrderReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlanningReleaseQty_Item">
+          <DataField>PlanningReleaseQty_Item</DataField>
+        </Field>
+        <Field Name="PlanningReleaseQty_ItemFormat">
+          <DataField>PlanningReleaseQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PlannedOrderReleaseQty_Item">
+          <DataField>PlannedOrderReleaseQty_Item</DataField>
+        </Field>
+        <Field Name="PlannedOrderReleaseQty_ItemFormat">
+          <DataField>PlannedOrderReleaseQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PurchReqReceiptQty_Item">
+          <DataField>PurchReqReceiptQty_Item</DataField>
+        </Field>
+        <Field Name="PurchReqReceiptQty_ItemFormat">
+          <DataField>PurchReqReceiptQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="PurchReqReleaseQty_Item">
+          <DataField>PurchReqReleaseQty_Item</DataField>
+        </Field>
+        <Field Name="PurchReqReleaseQty_ItemFormat">
+          <DataField>PurchReqReleaseQty_ItemFormat</DataField>
+        </Field>
+        <Field Name="OrderTrackingPolicy_Item">
+          <DataField>OrderTrackingPolicy_Item</DataField>
+        </Field>
+        <Field Name="ProdForecastQuantityBase_Item">
+          <DataField>ProdForecastQuantityBase_Item</DataField>
+        </Field>
+        <Field Name="ProdForecastQuantityBase_ItemFormat">
+          <DataField>ProdForecastQuantityBase_ItemFormat</DataField>
+        </Field>
+        <Field Name="ProductionForecastName_Item">
+          <DataField>ProductionForecastName_Item</DataField>
+        </Field>
+        <Field Name="ComponentForecast_Item">
+          <DataField>ComponentForecast_Item</DataField>
+        </Field>
+        <Field Name="QtyonProdOrder_Item">
+          <DataField>QtyonProdOrder_Item</DataField>
+        </Field>
+        <Field Name="QtyonProdOrder_ItemFormat">
+          <DataField>QtyonProdOrder_ItemFormat</DataField>
+        </Field>
+        <Field Name="QtyonComponentLines_Item">
+          <DataField>QtyonComponentLines_Item</DataField>
+        </Field>
+        <Field Name="QtyonComponentLines_ItemFormat">
+          <DataField>QtyonComponentLines_ItemFormat</DataField>
+        </Field>
+        <Field Name="Critical_Item">
+          <DataField>Critical_Item</DataField>
+        </Field>
+        <Field Name="CommonItemNo_Item">
+          <DataField>CommonItemNo_Item</DataField>
+        </Field>
+        <Field Name="LastPurchasedDate__">
+          <DataField>LastPurchasedDate__</DataField>
+        </Field>
+        <Field Name="LastUsedDate__">
+          <DataField>LastUsedDate__</DataField>
+        </Field>
+        <Field Name="AnnualUsage__">
+          <DataField>AnnualUsage__</DataField>
+        </Field>
+        <Field Name="AnnualUsage__Format">
+          <DataField>AnnualUsage__Format</DataField>
+        </Field>
+        <Field Name="EN_InventoryNSW__">
+          <DataField>EN_InventoryNSW__</DataField>
+        </Field>
+        <Field Name="EN_InventoryNSW__Format">
+          <DataField>EN_InventoryNSW__Format</DataField>
+        </Field>
+        <Field Name="EN_InventoryWA__">
+          <DataField>EN_InventoryWA__</DataField>
+        </Field>
+        <Field Name="EN_InventoryWA__Format">
+          <DataField>EN_InventoryWA__Format</DataField>
+        </Field>
+        <Field Name="EN_InventoryVIC__">
+          <DataField>EN_InventoryVIC__</DataField>
+        </Field>
+        <Field Name="EN_InventoryVIC__Format">
+          <DataField>EN_InventoryVIC__Format</DataField>
+        </Field>
+        <Field Name="EN_InventoryQLD__">
+          <DataField>EN_InventoryQLD__</DataField>
+        </Field>
+        <Field Name="EN_InventoryQLD__Format">
+          <DataField>EN_InventoryQLD__Format</DataField>
+        </Field>
+        <Field Name="EN_MinimumGPPerc__">
+          <DataField>EN_MinimumGPPerc__</DataField>
+        </Field>
+        <Field Name="EN_MinimumGPPerc__Format">
+          <DataField>EN_MinimumGPPerc__Format</DataField>
+        </Field>
+        <Field Name="SourceNo_ValueEntry__">
+          <DataField>SourceNo_ValueEntry__</DataField>
+        </Field>
+        <Field Name="Description_Item2__">
+          <DataField>Description_Item2__</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
