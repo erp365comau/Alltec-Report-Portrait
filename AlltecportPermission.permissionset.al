@@ -1,0 +1,33 @@
+permissionset 70200 AlltecportPermission
+{
+    Assignable = true;
+    Permissions = tabledata ADENIndustry = RIMD,
+        table ADENIndustry = X,
+        report "ADES_Cust. - Pay. Receipt - AD" = X,
+        report "ADES_Cust. Prod. Sls. by Month" = X,
+        report "ADES_Finished Goods Usage" = X,
+        report "ADES_Hist. Costing and Pricing" = X,
+        report "ADES_Item Register - Qty. - AD" = X,
+        report "ADES_Last Total Unit Cost Upd." = X,
+        report "ADES_Order Confirmation - AD" = X,
+        report "ADES_Phys. Inventory List-AD-P" = X,
+        report "ADES_Pick Instruction - AD" = X,
+        report "ADES_Prod. Order - Job Card_AD" = X,
+        report "ADES_Prod. Purch. By Ven. Inv." = X,
+        report "ADES_Prod. Sales By Cust. Inv." = X,
+        report "ADES_Prod. Sls. By Cust. Inv.2" = X,
+        report ADES_ProdSalesByCustInvSummary = X,
+        report "ADES_Purchase Order - ADP V1.2" = X,
+        report "ADES_Raw Material Usage" = X,
+        report "ADES_Round Value Entry Values" = X,
+        report "ADES_Sales Invoice - ADP V1.2" = X,
+        report "ADES_Sales Quote - ADP V1.2" = X,
+        report "ADES_Sales Shipment - ADP V1.0" = X,
+        report "ADES_Transfer Order - AD - P" = X,
+        report "ADES_Update Item Category Code" = X,
+        report "ADES_Update Ledger Item Detail" = X,
+        report "ADES_Update Salesperson Code" = X,
+        report "Sales - Cr. Memo - ADP - V1.2" = X,
+        report "Vendor Pay. Receipt-AD-PV 1.3" = X,
+        page ADENIndustries = X;
+}
