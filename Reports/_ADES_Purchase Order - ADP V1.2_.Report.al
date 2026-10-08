@@ -77,9 +77,9 @@ report 70215 "ADES_Purchase Order - ADP V1.2"
                     column(CompanyInfoVATRegNo; CompanyInfo.ABN)
                     {
                     }
-                    /*  column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                     {
-                     } */
+                    column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                    {
+                    }
                     column(CompanyInfoEmail; CompanyInfo."E-Mail")
                     {
                     }

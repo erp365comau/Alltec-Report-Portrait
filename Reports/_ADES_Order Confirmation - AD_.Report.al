@@ -98,9 +98,9 @@ report 70213 "ADES_Order Confirmation - AD"
                     column(CustAddr5; CustAddr[5])
                     {
                     }
-                    /*   column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                      {
-                      } */
+                    column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                    {
+                    }
                     column(CompanyInfoEmail; CompanyInfo."E-Mail")
                     {
                     }

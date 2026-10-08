@@ -84,9 +84,9 @@ report 70207 "ADES_Sales Shipment - ADP V1.0"
                     column(CompanyInfoVATRegNo; CompanyInfo."VAT Registration No.")
                     {
                     }
-                    /*   column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                      {
-                      } */
+                    column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                    {
+                    }
                     column(CompanyInfoEmail; CompanyInfo."E-Mail")
                     {
                     }

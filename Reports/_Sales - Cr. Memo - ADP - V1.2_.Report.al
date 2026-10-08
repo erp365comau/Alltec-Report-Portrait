@@ -94,9 +94,9 @@ report 70216 "Sales - Cr. Memo - ADP - V1.2"
                     column(CompanyInfoEmail; CompanyInfo."E-Mail")
                     {
                     }
-                    /*   column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                      {
-                      } */
+                    column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                    {
+                    }
                     column(CompanyInfoVATRegsNo; CompanyInfo."VAT Registration No.")
                     {
                     }

@@ -144,9 +144,9 @@ report 70214 "ADES_Sales Quote - ADP V1.2"
                     column(CompanyInfoEmail; CompanyInfo."E-Mail")
                     {
                     }
-                    /*   column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                      {
-                      } */
+                    column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                    {
+                    }
                     column(CompanyInfoBankName; CompanyInfo."Bank Name")
                     {
                     }

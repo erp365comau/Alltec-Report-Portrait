@@ -3640,6 +3640,9 @@ End Function
         <Field Name="CompanyInfoPhoneNo">
           <DataField>CompanyInfoPhoneNo</DataField>
         </Field>
+        <Field Name="CompanyInfoHomePage">
+          <DataField>CompanyInfoHomePage</DataField>
+        </Field>
         <Field Name="CompanyInfoVATRegNo">
           <DataField>CompanyInfoVATRegNo</DataField>
         </Field>

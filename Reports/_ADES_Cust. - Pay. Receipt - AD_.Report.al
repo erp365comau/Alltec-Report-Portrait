@@ -75,9 +75,9 @@ report 70210 "ADES_Cust. - Pay. Receipt - AD"
                 column(CompanyInfoPhoneNo; CompanyInfo."Phone No.")
                 {
                 }
-                /*  column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                 {
-                 } */
+                column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                {
+                }
                 column(CompanyInfoVATRegNo; CompanyInfo."VAT Registration No.")
                 {
                 }

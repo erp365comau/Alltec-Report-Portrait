@@ -74,9 +74,9 @@ report 70201 "Vendor Pay. Receipt-AD-PV 1.3"
                 column(CompanyInfoEmail; CompanyInfo."E-Mail")
                 {
                 }
-                /*  column(CompanyInfoHomePage; CompanyInfo."Home Page")
-                 {
-                 } */
+                column(CompanyInfoHomePage; CompanyInfo."Home Page")
+                {
+                }
                 column(CompanyInfoVATRegNo; CompanyInfo."VAT Registration No.")
                 {
                 }
