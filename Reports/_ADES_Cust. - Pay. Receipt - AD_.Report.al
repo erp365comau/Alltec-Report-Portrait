@@ -2,7 +2,7 @@ report 70210 "ADES_Cust. - Pay. Receipt - AD"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70210.ADES_CustomerPaymentReceipt_AD.rdl';
-    Caption = 'Customer - Payment Receipt - AD';
+    Caption = 'Customer - Payment Receipt -ERP365';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
 

@@ -3,14 +3,14 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70223.ADES_PhysInventoryList_AD_P.rdl';
     ApplicationArea = Warehouse;
-    Caption = 'Physical Inventory List - AD';
+    Caption = 'Physical Inventory List -ERP365';
     UsageCategory = ReportsAndAnalysis;
 
     dataset
     {
         dataitem(PageLoop; "Integer")
         {
-            DataItemTableView = SORTING(Number)WHERE(Number=CONST(1));
+            DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
 
             column(CompanyName; COMPANYPROPERTY.DisplayName)
             {
@@ -72,7 +72,7 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
                 }
                 dataitem("Item Journal Line"; "Item Journal Line")
                 {
-                    DataItemLink = "Journal Template Name"=FIELD("Journal Template Name"), "Journal Batch Name"=FIELD(Name);
+                    DataItemLink = "Journal Template Name" = FIELD("Journal Template Name"), "Journal Batch Name" = FIELD(Name);
                     DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", "Line No.");
                     RequestFilterFields = "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code", "Location Code", "Bin Code";
 
@@ -81,15 +81,15 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
                     }
                     column(DocNo_ItemJournalLine; "Document No.")
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(ItemNo_ItemJournalLine; "Item No.")
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(Desc_ItemJournalLine; Description)
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(ShotcutDim1Code_ItemJnlLin; "Shortcut Dimension 1 Code")
                     {
@@ -99,15 +99,15 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
                     }
                     column(LocCode_ItemJournalLine; "Location Code")
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(QtyCalculated_ItemJnlLin; "Qty. (Calculated)")
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(BinCode_ItemJournalLine; "Bin Code")
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(Note; Note)
                     {
@@ -142,17 +142,19 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
                         }
                         column(ReservEntryBufferQtyBase; ReservEntryBuffer."Quantity (Base)")
                         {
-                        DecimalPlaces = 0: 0;
+                            DecimalPlaces = 0 : 0;
                         }
                         column(SummaryperItemCaption; SummaryperItemCaptionLbl)
                         {
                         }
                         trigger OnAfterGetRecord()
                         begin
-                            if Number = 1 then ReservEntryBuffer.FindSet
+                            if Number = 1 then
+                                ReservEntryBuffer.FindSet
                             else
                                 ReservEntryBuffer.Next;
                         end;
+
                         trigger OnPreDataItem()
                         begin
                             ReservEntryBuffer.SetCurrentKey("Source ID", "Source Ref. No.", "Source Type", "Source Subtype", "Source Batch Name");
@@ -163,19 +165,20 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
                             ReservEntryBuffer.SetRange("Source Batch Name", "Item Journal Line"."Journal Batch Name");
                             if ReservEntryBuffer.IsEmpty then CurrReport.Break();
                             SetRange(Number, 1, ReservEntryBuffer.Count);
-                            GetLotNoCaption:=ReservEntryBuffer.FieldCaption("Lot No.");
-                            GetSerialNoCaption:=ReservEntryBuffer.FieldCaption("Serial No.");
-                            GetQuantityBaseCaption:=ReservEntryBuffer.FieldCaption("Quantity (Base)");
+                            GetLotNoCaption := ReservEntryBuffer.FieldCaption("Lot No.");
+                            GetSerialNoCaption := ReservEntryBuffer.FieldCaption("Serial No.");
+                            GetQuantityBaseCaption := ReservEntryBuffer.FieldCaption("Quantity (Base)");
                         end;
                     }
                     trigger OnAfterGetRecord()
                     begin
                         if ShowLotSN then begin
-                            Note:='';
-                            ShowSummary:=false;
-                            if "Bin Code" <> '' then if not ItemTrackingMgt.GetWhseItemTrkgSetup("Item No.")then begin
-                                    Note:=NoteTxt;
-                                    ShowSummary:=true;
+                            Note := '';
+                            ShowSummary := false;
+                            if "Bin Code" <> '' then
+                                if not ItemTrackingMgt.GetWhseItemTrkgSetup("Item No.") then begin
+                                    Note := NoteTxt;
+                                    ShowSummary := true;
                                 end;
                             Clear(ReservEntryBuffer);
                         end;
@@ -183,7 +186,7 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
                 }
                 trigger OnAfterGetRecord()
                 begin
-                    if ItemJournalTemplate.Get("Journal Template Name")then if ItemJournalTemplate.Type <> ItemJournalTemplate.Type::"Phys. Inventory" then CurrReport.Skip();
+                    if ItemJournalTemplate.Get("Journal Template Name") then if ItemJournalTemplate.Type <> ItemJournalTemplate.Type::"Phys. Inventory" then CurrReport.Skip();
                 end;
             }
         }
@@ -222,62 +225,69 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
     }
     trigger OnPreReport()
     begin
-        ItemJnlLineFilter:="Item Journal Line".GetFilters;
-        ItemJnlBatchFilter:="Item Journal Batch".GetFilters;
+        ItemJnlLineFilter := "Item Journal Line".GetFilters;
+        ItemJnlBatchFilter := "Item Journal Batch".GetFilters;
         if ShowLotSN then begin
-            ShowNote:=false;
+            ShowNote := false;
             ItemJnlLine.CopyFilters("Item Journal Line");
             "Item Journal Batch".CopyFilter("Journal Template Name", ItemJnlLine."Journal Template Name");
             "Item Journal Batch".CopyFilter(Name, ItemJnlLine."Journal Batch Name");
             CreateSNLotEntries(ItemJnlLine);
         end;
     end;
-    var ItemJournalTemplate: Record "Item Journal Template";
-    ItemJnlLine: Record "Item Journal Line";
-    ReservEntryBuffer: Record "Reservation Entry" temporary;
-    ItemTrackingMgt: Codeunit "Item Tracking Management";
-    ItemJnlLineFilter: Text;
-    ItemJnlBatchFilter: Text;
-    Note: Text[1];
-    ShowQtyCalculated: Boolean;
-    ShowLotSN: Boolean;
-    ShowNote: Boolean;
-    ShowSummary: Boolean;
-    NoteTxt: Label '*', Locked = true;
-    EntryNo: Integer;
-    GetLotNoCaption: Text[80];
-    GetSerialNoCaption: Text[80];
-    GetQuantityBaseCaption: Text[80];
-    Note1Lbl: Label '*Note:';
-    SummaryPerItemLbl: Label 'Your system is set up to use Bin Mandatory and not SN/Lot Warehouse Tracking. Therefore, you will not see serial/lot numbers by bin but merely as a summary per item.';
-    PhysInventoryListCaptionLbl: Label 'Phys. Inventory List';
-    CurrReportPageNoCaptionLbl: Label 'Page';
-    ItemJnlLinePostDtCaptionLbl: Label 'Posting Date';
-    QtyPhysInventoryCaptionLbl: Label 'Qty. (Phys. Inventory)';
-    SummaryperItemCaptionLbl: Label 'Summary per Item *';
+
+    var
+        ItemJournalTemplate: Record "Item Journal Template";
+        ItemJnlLine: Record "Item Journal Line";
+        ReservEntryBuffer: Record "Reservation Entry" temporary;
+        ItemTrackingMgt: Codeunit "Item Tracking Management";
+        ItemJnlLineFilter: Text;
+        ItemJnlBatchFilter: Text;
+        Note: Text[1];
+        ShowQtyCalculated: Boolean;
+        ShowLotSN: Boolean;
+        ShowNote: Boolean;
+        ShowSummary: Boolean;
+        NoteTxt: Label '*', Locked = true;
+        EntryNo: Integer;
+        GetLotNoCaption: Text[80];
+        GetSerialNoCaption: Text[80];
+        GetQuantityBaseCaption: Text[80];
+        Note1Lbl: Label '*Note:';
+        SummaryPerItemLbl: Label 'Your system is set up to use Bin Mandatory and not SN/Lot Warehouse Tracking. Therefore, you will not see serial/lot numbers by bin but merely as a summary per item.';
+        PhysInventoryListCaptionLbl: Label 'Phys. Inventory List';
+        CurrReportPageNoCaptionLbl: Label 'Page';
+        ItemJnlLinePostDtCaptionLbl: Label 'Posting Date';
+        QtyPhysInventoryCaptionLbl: Label 'Qty. (Phys. Inventory)';
+        SummaryperItemCaptionLbl: Label 'Summary per Item *';
+
     procedure Initialize(ShowQtyCalculated2: Boolean)
     begin
-        ShowQtyCalculated:=ShowQtyCalculated2;
+        ShowQtyCalculated := ShowQtyCalculated2;
     end;
+
     local procedure CreateSNLotEntries(var ItemJnlLine: Record "Item Journal Line")
     begin
-        EntryNo:=0;
-        if ItemJnlLine.FindSet then repeat if ItemJnlLine."Bin Code" <> '' then begin
-                    if ItemTrackingMgt.GetWhseItemTrkgSetup(ItemJnlLine."Item No.")then PickSNLotFromWhseEntry(ItemJnlLine."Item No.", ItemJnlLine."Variant Code", ItemJnlLine."Location Code", ItemJnlLine."Bin Code", ItemJnlLine."Unit of Measure Code")
-                    else
-                    begin
+        EntryNo := 0;
+        if ItemJnlLine.FindSet then
+            repeat
+                if ItemJnlLine."Bin Code" <> '' then begin
+                    if ItemTrackingMgt.GetWhseItemTrkgSetup(ItemJnlLine."Item No.") then
+                        PickSNLotFromWhseEntry(ItemJnlLine."Item No.", ItemJnlLine."Variant Code", ItemJnlLine."Location Code", ItemJnlLine."Bin Code", ItemJnlLine."Unit of Measure Code")
+                    else begin
                         CreateSummary(ItemJnlLine);
-                        ShowNote:=true;
+                        ShowNote := true;
                     end;
                 end
-                else
-                begin
-                    if DirectedPutAwayAndPick(ItemJnlLine."Location Code")then CreateSummary(ItemJnlLine)
+                else begin
+                    if DirectedPutAwayAndPick(ItemJnlLine."Location Code") then
+                        CreateSummary(ItemJnlLine)
                     else
                         PickSNLotFromILEntry(ItemJnlLine."Item No.", ItemJnlLine."Variant Code", ItemJnlLine."Location Code");
                 end;
             until ItemJnlLine.Next = 0;
     end;
+
     local procedure PickSNLotFromILEntry(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10])
     var
         ItemLedgEntry: Record "Item Ledger Entry";
@@ -285,15 +295,18 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
         ItemLedgEntry.SetCurrentKey("Item No.", Open, "Variant Code", "Location Code");
         ItemLedgEntry.SetRange("Item No.", ItemNo);
         if ItemJnlLine."Qty. (Phys. Inventory)" = 0 then // Item Not on Inventory, show old SN/Lot
- ItemLedgEntry.SetRange(Open, false)
+            ItemLedgEntry.SetRange(Open, false)
         else
             ItemLedgEntry.SetRange(Open, true);
         ItemLedgEntry.SetRange("Variant Code", VariantCode);
         ItemLedgEntry.SetRange("Location Code", LocationCode);
         ItemLedgEntry.SetFilter("Item Tracking", '<>%1', ItemLedgEntry."Item Tracking"::None);
-        if ItemLedgEntry.FindSet then repeat CreateReservEntry(ItemJnlLine, ItemLedgEntry."Remaining Quantity", ItemLedgEntry."Serial No.", ItemLedgEntry."Lot No.", ItemLedgEntry."Item Tracking");
+        if ItemLedgEntry.FindSet then
+            repeat
+                CreateReservEntry(ItemJnlLine, ItemLedgEntry."Remaining Quantity", ItemLedgEntry."Serial No.", ItemLedgEntry."Lot No.", ItemLedgEntry."Item Tracking");
             until ItemLedgEntry.Next = 0;
     end;
+
     local procedure PickSNLotFromWhseEntry(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; BinCode: Code[20]; UnitOM: Code[10])
     var
         WhseEntry: Record "Warehouse Entry";
@@ -305,14 +318,17 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
         WhseEntry.SetRange("Location Code", LocationCode);
         WhseEntry.SetRange("Variant Code", VariantCode);
         WhseEntry.SetRange("Unit of Measure Code", UnitOM);
-        if WhseEntry.FindSet then repeat if(WhseEntry."Lot No." <> '') and (WhseEntry."Serial No." <> '')then CreateReservEntry(ItemJnlLine, WhseEntry."Qty. (Base)", WhseEntry."Serial No.", WhseEntry."Lot No.", ItemTrackingEntryType::"Lot and Serial No.")
-                else
-                begin
+        if WhseEntry.FindSet then
+            repeat
+                if (WhseEntry."Lot No." <> '') and (WhseEntry."Serial No." <> '') then
+                    CreateReservEntry(ItemJnlLine, WhseEntry."Qty. (Base)", WhseEntry."Serial No.", WhseEntry."Lot No.", ItemTrackingEntryType::"Lot and Serial No.")
+                else begin
                     if WhseEntry."Lot No." <> '' then CreateReservEntry(ItemJnlLine, WhseEntry."Qty. (Base)", WhseEntry."Serial No.", WhseEntry."Lot No.", ItemTrackingEntryType::"Lot No.");
                     if WhseEntry."Serial No." <> '' then CreateReservEntry(ItemJnlLine, WhseEntry."Qty. (Base)", WhseEntry."Serial No.", WhseEntry."Lot No.", ItemTrackingEntryType::"Serial No.");
                 end;
             until WhseEntry.Next = 0;
     end;
+
     local procedure CreateReservEntry(ItemJournalLine: Record "Item Journal Line"; Qty: Decimal; SerialNo: Code[50]; LotNo: Code[50]; ItemTracking: Enum "Item Tracking Entry Type")
     var
         FoundRec: Boolean;
@@ -326,43 +342,47 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
         ReservEntryBuffer.SetRange("Serial No.", SerialNo);
         ReservEntryBuffer.SetRange("Lot No.", LotNo);
         if ReservEntryBuffer.FindSet then begin
-            repeat if(ReservEntryBuffer."Source Ref. No." = ItemJournalLine."Line No.") and (ReservEntryBuffer."Source ID" = ItemJournalLine."Journal Template Name") and (ReservEntryBuffer."Source Batch Name" = ItemJournalLine."Journal Batch Name")then FoundRec:=true;
-            until(ReservEntryBuffer.Next = 0) or FoundRec;
+            repeat
+                if (ReservEntryBuffer."Source Ref. No." = ItemJournalLine."Line No.") and (ReservEntryBuffer."Source ID" = ItemJournalLine."Journal Template Name") and (ReservEntryBuffer."Source Batch Name" = ItemJournalLine."Journal Batch Name") then FoundRec := true;
+            until (ReservEntryBuffer.Next = 0) or FoundRec;
         end;
         if not FoundRec then begin
-            EntryNo+=1;
-            ReservEntryBuffer."Entry No.":=EntryNo;
-            ReservEntryBuffer."Item No.":=ItemJournalLine."Item No.";
-            ReservEntryBuffer."Location Code":=ItemJournalLine."Location Code";
-            ReservEntryBuffer."Quantity (Base)":=Qty;
-            ReservEntryBuffer."Variant Code":=ItemJournalLine."Variant Code";
-            ReservEntryBuffer."Reservation Status":=ReservEntryBuffer."Reservation Status"::Prospect;
-            ReservEntryBuffer."Creation Date":=WorkDate;
-            ReservEntryBuffer."Source Type":=DATABASE::"Item Journal Line";
-            ReservEntryBuffer."Source ID":=ItemJournalLine."Journal Template Name";
-            ReservEntryBuffer."Source Batch Name":=ItemJournalLine."Journal Batch Name";
-            ReservEntryBuffer."Source Ref. No.":=ItemJournalLine."Line No.";
-            ReservEntryBuffer."Qty. per Unit of Measure":=ItemJournalLine."Qty. per Unit of Measure";
-            ReservEntryBuffer."Serial No.":=SerialNo;
-            ReservEntryBuffer."Lot No.":=LotNo;
-            ReservEntryBuffer."Item Tracking":=ItemTracking;
+            EntryNo += 1;
+            ReservEntryBuffer."Entry No." := EntryNo;
+            ReservEntryBuffer."Item No." := ItemJournalLine."Item No.";
+            ReservEntryBuffer."Location Code" := ItemJournalLine."Location Code";
+            ReservEntryBuffer."Quantity (Base)" := Qty;
+            ReservEntryBuffer."Variant Code" := ItemJournalLine."Variant Code";
+            ReservEntryBuffer."Reservation Status" := ReservEntryBuffer."Reservation Status"::Prospect;
+            ReservEntryBuffer."Creation Date" := WorkDate;
+            ReservEntryBuffer."Source Type" := DATABASE::"Item Journal Line";
+            ReservEntryBuffer."Source ID" := ItemJournalLine."Journal Template Name";
+            ReservEntryBuffer."Source Batch Name" := ItemJournalLine."Journal Batch Name";
+            ReservEntryBuffer."Source Ref. No." := ItemJournalLine."Line No.";
+            ReservEntryBuffer."Qty. per Unit of Measure" := ItemJournalLine."Qty. per Unit of Measure";
+            ReservEntryBuffer."Serial No." := SerialNo;
+            ReservEntryBuffer."Lot No." := LotNo;
+            ReservEntryBuffer."Item Tracking" := ItemTracking;
             ReservEntryBuffer.Insert();
         end
-        else
-        begin
-            ReservEntryBuffer."Quantity (Base)"+=Qty;
-            if(ReservEntryBuffer."Quantity (Base)" = 0) and (ItemJournalLine."Qty. (Calculated)" <> 0)then ReservEntryBuffer.Delete()
+        else begin
+            ReservEntryBuffer."Quantity (Base)" += Qty;
+            if (ReservEntryBuffer."Quantity (Base)" = 0) and (ItemJournalLine."Qty. (Calculated)" <> 0) then
+                ReservEntryBuffer.Delete()
             else
                 ReservEntryBuffer.Modify();
         end;
     end;
-    local procedure DirectedPutAwayAndPick(LocationCode: Code[10]): Boolean var
+
+    local procedure DirectedPutAwayAndPick(LocationCode: Code[10]): Boolean
+    var
         Location: Record Location;
     begin
         if LocationCode = '' then exit(false);
         Location.Get(LocationCode);
         exit(Location."Directed Put-away and Pick");
     end;
+
     local procedure CreateSummary(var ItemJnlLine1: Record "Item Journal Line")
     var
         ItemJnlLine2: Record "Item Journal Line";
@@ -372,16 +392,18 @@ report 70223 "ADES_Phys. Inventory List-AD-P"
         NewGroup: Boolean;
     begin
         // Create SN/Lot entry only for the last journal line in the group
-        ItemNo:=ItemJnlLine1."Item No.";
-        VariantCode:=ItemJnlLine1."Variant Code";
-        LocationCode:=ItemJnlLine1."Location Code";
-        NewGroup:=false;
-        ItemJnlLine2:=ItemJnlLine1;
-        repeat if(ItemNo <> ItemJnlLine1."Item No.") or (VariantCode <> ItemJnlLine1."Variant Code") or (LocationCode <> ItemJnlLine1."Location Code")then NewGroup:=true
+        ItemNo := ItemJnlLine1."Item No.";
+        VariantCode := ItemJnlLine1."Variant Code";
+        LocationCode := ItemJnlLine1."Location Code";
+        NewGroup := false;
+        ItemJnlLine2 := ItemJnlLine1;
+        repeat
+            if (ItemNo <> ItemJnlLine1."Item No.") or (VariantCode <> ItemJnlLine1."Variant Code") or (LocationCode <> ItemJnlLine1."Location Code") then
+                NewGroup := true
             else
-                ItemJnlLine2:=ItemJnlLine1;
-        until(ItemJnlLine1.Next = 0) or NewGroup;
-        ItemJnlLine1:=ItemJnlLine2;
+                ItemJnlLine2 := ItemJnlLine1;
+        until (ItemJnlLine1.Next = 0) or NewGroup;
+        ItemJnlLine1 := ItemJnlLine2;
         PickSNLotFromILEntry(ItemJnlLine1."Item No.", ItemJnlLine1."Variant Code", ItemJnlLine1."Location Code");
     end;
 }

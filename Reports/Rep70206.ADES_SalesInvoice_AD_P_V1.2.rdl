@@ -17641,7 +17641,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.31334cm</Left>
               <Height>4pt</Height>
               <Width>0.24897cm</Width>
-              <ZIndex>23</ZIndex>
+              <ZIndex>22</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17672,7 +17672,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>24</ZIndex>
+              <ZIndex>23</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17701,7 +17701,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.41358cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>25</ZIndex>
+              <ZIndex>24</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17732,7 +17732,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>26</ZIndex>
+              <ZIndex>25</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17763,7 +17763,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>27</ZIndex>
+              <ZIndex>26</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17794,7 +17794,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>28</ZIndex>
+              <ZIndex>27</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17824,7 +17824,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>3.02333cm</Top>
               <Height>19.99955pt</Height>
               <Width>11.14906cm</Width>
-              <ZIndex>29</ZIndex>
+              <ZIndex>28</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -17855,7 +17855,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.8904cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>30</ZIndex>
+              <ZIndex>29</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17887,7 +17887,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.94427cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>31</ZIndex>
+              <ZIndex>30</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17916,7 +17916,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.8638cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>32</ZIndex>
+              <ZIndex>31</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17945,7 +17945,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.94427cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>33</ZIndex>
+              <ZIndex>32</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -17974,7 +17974,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.38039cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>34</ZIndex>
+              <ZIndex>33</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18003,7 +18003,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.38039cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>35</ZIndex>
+              <ZIndex>34</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18029,7 +18029,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>1.10701cm</Left>
               <Height>0.08815cm</Height>
               <Width>0.06684cm</Width>
-              <ZIndex>36</ZIndex>
+              <ZIndex>35</ZIndex>
               <Visibility>
                 <Hidden>=Code.SetData(ReportItems!CustAddr.Value,1)</Hidden>
               </Visibility>
@@ -18065,7 +18065,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.41405cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>37</ZIndex>
+              <ZIndex>36</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18094,7 +18094,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.38039cm</Left>
               <Height>2.5pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>38</ZIndex>
+              <ZIndex>37</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18124,7 +18124,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>39</ZIndex>
+              <ZIndex>38</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18156,7 +18156,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.38039cm</Left>
               <Height>2.5pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>40</ZIndex>
+              <ZIndex>39</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18187,7 +18187,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>41</ZIndex>
+              <ZIndex>40</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18217,7 +18217,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>3.88344in</Left>
               <Height>4pt</Height>
               <Width>0.01042in</Width>
-              <ZIndex>42</ZIndex>
+              <ZIndex>41</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18251,7 +18251,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>3.88344in</Left>
               <Height>4pt</Height>
               <Width>0.01042in</Width>
-              <ZIndex>43</ZIndex>
+              <ZIndex>42</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18282,7 +18282,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.94427cm</Left>
               <Height>4pt</Height>
               <Width>0.24897cm</Width>
-              <ZIndex>44</ZIndex>
+              <ZIndex>43</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18313,7 +18313,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.41405cm</Left>
               <Height>2.5pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>45</ZIndex>
+              <ZIndex>44</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18346,7 +18346,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>16.96852cm</Left>
               <Height>1cm</Height>
               <Width>1.98849cm</Width>
-              <ZIndex>46</ZIndex>
+              <ZIndex>45</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18382,7 +18382,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.41405cm</Left>
               <Height>0.14111cm</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>47</ZIndex>
+              <ZIndex>46</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18411,7 +18411,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>16.96852cm</Left>
               <Height>1cm</Height>
               <Width>1.98849cm</Width>
-              <ZIndex>48</ZIndex>
+              <ZIndex>47</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18445,7 +18445,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.38039cm</Left>
               <Height>0.14111cm</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>49</ZIndex>
+              <ZIndex>48</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18460,7 +18460,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.24613cm</Left>
               <Height>9.25pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>50</ZIndex>
+              <ZIndex>49</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18478,7 +18478,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.24613cm</Left>
               <Height>9.25pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>51</ZIndex>
+              <ZIndex>50</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18496,7 +18496,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>10.24613cm</Left>
               <Height>9.25pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>52</ZIndex>
+              <ZIndex>51</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18528,7 +18528,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.86394cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>53</ZIndex>
+              <ZIndex>52</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18559,7 +18559,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.91686cm</Left>
               <Height>4pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>54</ZIndex>
+              <ZIndex>53</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18590,7 +18590,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.42509cm</Left>
               <Height>28.34646pt</Height>
               <Width>2.5cm</Width>
-              <ZIndex>55</ZIndex>
+              <ZIndex>54</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18609,7 +18609,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>0.2cm</Top>
               <Height>2.61248cm</Height>
               <Width>8.47038cm</Width>
-              <ZIndex>56</ZIndex>
+              <ZIndex>55</ZIndex>
               <Visibility>
                 <Hidden>=iif(IsNothing(First(Fields!CompInfoPicture.Value, "DataSet_Result")) = TRUE,true,false)</Hidden>
               </Visibility>
@@ -18640,7 +18640,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>5.69735cm</Top>
               <Height>16.5pt</Height>
               <Width>9.5cm</Width>
-              <ZIndex>57</ZIndex>
+              <ZIndex>56</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18674,7 +18674,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.5cm</Left>
               <Height>16.5pt</Height>
               <Width>9.45701cm</Width>
-              <ZIndex>58</ZIndex>
+              <ZIndex>57</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18708,7 +18708,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.92509cm</Left>
               <Height>28.34646pt</Height>
               <Width>1.98849cm</Width>
-              <ZIndex>59</ZIndex>
+              <ZIndex>58</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18740,7 +18740,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>11.92509cm</Left>
               <Height>28.34646pt</Height>
               <Width>1.98849cm</Width>
-              <ZIndex>60</ZIndex>
+              <ZIndex>59</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18786,7 +18786,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>2.25cm</Left>
               <Height>1cm</Height>
               <Width>7.17509cm</Width>
-              <ZIndex>61</ZIndex>
+              <ZIndex>60</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18820,7 +18820,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>2.25cm</Left>
               <Height>1cm</Height>
               <Width>7.17509cm</Width>
-              <ZIndex>62</ZIndex>
+              <ZIndex>61</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -18856,7 +18856,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.91686cm</Left>
               <Height>0.14111cm</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>63</ZIndex>
+              <ZIndex>62</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18888,7 +18888,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.91686cm</Left>
               <Height>0.14111cm</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>64</ZIndex>
+              <ZIndex>63</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -18915,7 +18915,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>3.72887cm</Top>
               <Height>12pt</Height>
               <Width>11.14906cm</Width>
-              <ZIndex>65</ZIndex>
+              <ZIndex>64</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -18943,7 +18943,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>4.57554cm</Top>
               <Height>12pt</Height>
               <Width>11.14906cm</Width>
-              <ZIndex>66</ZIndex>
+              <ZIndex>65</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -18971,7 +18971,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>4.99887cm</Top>
               <Height>12pt</Height>
               <Width>11.14906cm</Width>
-              <ZIndex>67</ZIndex>
+              <ZIndex>66</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -19001,7 +19001,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>13.30145cm</Left>
               <Height>25.89974pt</Height>
               <Width>5.65556cm</Width>
-              <ZIndex>68</ZIndex>
+              <ZIndex>67</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -19030,7 +19030,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>13.3231cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.56563cm</Width>
-              <ZIndex>69</ZIndex>
+              <ZIndex>68</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -19059,7 +19059,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>13.3231cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.56563cm</Width>
-              <ZIndex>70</ZIndex>
+              <ZIndex>69</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -19246,7 +19246,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>6.27943cm</Top>
               <Height>3.22403cm</Height>
               <Width>9.5cm</Width>
-              <ZIndex>71</ZIndex>
+              <ZIndex>70</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -19434,7 +19434,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.5cm</Left>
               <Height>3.22403cm</Height>
               <Width>9.45701cm</Width>
-              <ZIndex>72</ZIndex>
+              <ZIndex>71</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -19464,7 +19464,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.91686cm</Left>
               <Height>4.00002pt</Height>
               <Width>0.02646cm</Width>
-              <ZIndex>73</ZIndex>
+              <ZIndex>72</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -19497,7 +19497,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>14.34152cm</Left>
               <Height>0.15145cm</Height>
               <Width>0.38235cm</Width>
-              <ZIndex>74</ZIndex>
+              <ZIndex>73</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -19533,7 +19533,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>9.42509cm</Left>
               <Height>28.34646pt</Height>
               <Width>2.5cm</Width>
-              <ZIndex>75</ZIndex>
+              <ZIndex>74</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -19564,7 +19564,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Top>4.1522cm</Top>
               <Height>12pt</Height>
               <Width>11.14906cm</Width>
-              <ZIndex>76</ZIndex>
+              <ZIndex>75</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -19594,7 +19594,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>13.91358cm</Left>
               <Height>28.34646pt</Height>
               <Width>3.05494cm</Width>
-              <ZIndex>77</ZIndex>
+              <ZIndex>76</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -19626,7 +19626,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
               <Left>13.91358cm</Left>
               <Height>28.34646pt</Height>
               <Width>3.05494cm</Width>
-              <ZIndex>78</ZIndex>
+              <ZIndex>77</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -19653,7 +19653,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>5.84446cm</Height>
+          <Height>3.19863cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -20094,7 +20094,7 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>4.02446cm</Top>
+                  <Top>2.43696cm</Top>
                   <Left>15.74589cm</Left>
                   <Height>0.55cm</Height>
                   <Width>3.21112cm</Width>
@@ -20107,62 +20107,10 @@ Cstr(Fields!DueDate_SalesInvHeader.Value), 1)</Hidden>
                     <PaddingBottom>2pt</PaddingBottom>
                   </Style>
                 </Textbox>
-                <Textbox Name="Textbox81">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>Please see link for our Terms &amp; Conditions to our website (</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                        <TextRun>
-                          <Value>https://envirosystems.com.au/terms-conditions/</Value>
-                          <MarkupType>HTML</MarkupType>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                            <Color>Blue</Color>
-                          </Style>
-                        </TextRun>
-                        <TextRun>
-                          <Value>)</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox78</rd:DefaultName>
-                  <Top>3.30723cm</Top>
-                  <Left>0cm</Left>
-                  <Height>0.5cm</Height>
-                  <Width>18.95701cm</Width>
-                  <ZIndex>8</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <VerticalAlign>Middle</VerticalAlign>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>0in</Top>
-              <Height>4.57446cm</Height>
+              <Height>3.19863cm</Height>
               <Width>18.95702cm</Width>
               <Visibility>
                 <Hidden>=Iif(Globals!TotalPages = Globals!PageNumber,FALSE,TRUE)</Hidden>

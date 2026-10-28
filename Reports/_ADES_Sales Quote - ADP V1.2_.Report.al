@@ -12,7 +12,7 @@ report 70214 "ADES_Sales Quote - ADP V1.2"
     // Austral Sugeevan 27/07/2020 >>> Mods
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70214.ADES_SalesQuote_AD_PV1.2.rdl';
-    Caption = 'Sales Quote - AD';
+    Caption = 'Sales Quote -ERP365';
 
     dataset
     {

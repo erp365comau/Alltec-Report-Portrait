@@ -16097,7 +16097,7 @@ Cstr(Fields!ExternalDocumentNo_SalesHeader__.Value),1)</Hidden>
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>6.5845cm</Height>
+          <Height>5.87012cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -16119,8 +16119,8 @@ Cstr(Fields!ExternalDocumentNo_SalesHeader__.Value),1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>6.0845cm</Top>
-              <Left>12.28198cm</Left>
+              <Top>5.23783cm</Top>
+              <Left>12.22169cm</Left>
               <Height>0.5cm</Height>
               <Width>5.62964cm</Width>
               <Style>
@@ -16149,8 +16149,8 @@ Cstr(Fields!ExternalDocumentNo_SalesHeader__.Value),1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>6.0845cm</Top>
-              <Left>0.11641cm</Left>
+              <Top>5.23783cm</Top>
+              <Left>0.05612cm</Left>
               <Height>0.5cm</Height>
               <Width>7.00104in</Width>
               <ZIndex>1</ZIndex>
@@ -16282,8 +16282,8 @@ Cstr(Fields!ExternalDocumentNo_SalesHeader__.Value),1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>5.5845cm</Top>
-              <Left>0.08819cm</Left>
+              <Top>4.73783cm</Top>
+              <Left>0.0279cm</Left>
               <Height>0.5cm</Height>
               <Width>7.01403in</Width>
               <ZIndex>5</ZIndex>
@@ -16658,58 +16658,6 @@ Cstr(Fields!ExternalDocumentNo_SalesHeader__.Value),1)</Hidden>
                 </Border>
               </Style>
             </Rectangle>
-            <Textbox Name="Textbox78">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Please see link for our Terms &amp; Conditions to our website (</Value>
-                      <Style>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>https://envirosystems.com.au/terms-conditions/</Value>
-                      <MarkupType>HTML</MarkupType>
-                      <Style>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <Color>Blue</Color>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>)</Value>
-                      <Style>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox78</rd:DefaultName>
-              <Top>4.94816cm</Top>
-              <Left>0.08819cm</Left>
-              <Height>0.5cm</Height>
-              <Width>17.81086cm</Width>
-              <ZIndex>13</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <Style>
             <Border>

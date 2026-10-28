@@ -2,7 +2,7 @@ report 70209 "ADES_Pick Instruction - AD"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70209.ADES_PickInstruction_AD.rdl';
-    Caption = 'Pick Instruction - AD';
+    Caption = 'Pick Instruction -ERP365';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
 

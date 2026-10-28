@@ -2,7 +2,7 @@ report 70222 "ADES_Transfer Order - AD - P"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70222.ADES_TransferOrder_AD_P.rdl';
-    Caption = 'Transfer Order - AD';
+    Caption = 'Transfer Order -ERP365';
 
     dataset
     {
@@ -24,7 +24,7 @@ report 70222 "ADES_Transfer Order - AD - P"
 
                 dataitem(PageLoop; "Integer")
                 {
-                    DataItemTableView = SORTING(Number)WHERE(Number=CONST(1));
+                    DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
 
                     column(CopyCaption; StrSubstNo(Text001, CopyText))
                     {
@@ -61,7 +61,7 @@ report 70222 "ADES_Transfer Order - AD - P"
                     }
                     column(InTransitCode_TransHdr; "Transfer Header"."In-Transit Code")
                     {
-                    IncludeCaption = true;
+                        IncludeCaption = true;
                     }
                     column(PostingDate_TransHdr; Format("Transfer Header"."Posting Date", 0, '<Day,2>/<Month,2>/<Year4>'))
                     {
@@ -126,7 +126,7 @@ report 70222 "ADES_Transfer Order - AD - P"
                     dataitem(DimensionLoop1; "Integer")
                     {
                         DataItemLinkReference = "Transfer Header";
-                        DataItemTableView = SORTING(Number)WHERE(Number=FILTER(1..));
+                        DataItemTableView = SORTING(Number) WHERE(Number = FILTER(1 ..));
 
                         column(DimText; DimText)
                         {
@@ -144,18 +144,21 @@ report 70222 "ADES_Transfer Order - AD - P"
                             end
                             else if not Continue then CurrReport.Break();
                             Clear(DimText);
-                            Continue:=false;
-                            repeat OldDimText:=DimText;
-                                if DimText = '' then DimText:=StrSubstNo('%1 - %2', DimSetEntry1."Dimension Code", DimSetEntry1."Dimension Value Code")
+                            Continue := false;
+                            repeat
+                                OldDimText := DimText;
+                                if DimText = '' then
+                                    DimText := StrSubstNo('%1 - %2', DimSetEntry1."Dimension Code", DimSetEntry1."Dimension Value Code")
                                 else
-                                    DimText:=StrSubstNo('%1; %2 - %3', DimText, DimSetEntry1."Dimension Code", DimSetEntry1."Dimension Value Code");
-                                if StrLen(DimText) > MaxStrLen(OldDimText)then begin
-                                    DimText:=OldDimText;
-                                    Continue:=true;
+                                    DimText := StrSubstNo('%1; %2 - %3', DimText, DimSetEntry1."Dimension Code", DimSetEntry1."Dimension Value Code");
+                                if StrLen(DimText) > MaxStrLen(OldDimText) then begin
+                                    DimText := OldDimText;
+                                    Continue := true;
                                     exit;
                                 end;
                             until DimSetEntry1.Next = 0;
                         end;
+
                         trigger OnPreDataItem()
                         begin
                             if not ShowInternalInfo then CurrReport.Break();
@@ -163,41 +166,41 @@ report 70222 "ADES_Transfer Order - AD - P"
                     }
                     dataitem("Transfer Line"; "Transfer Line")
                     {
-                        DataItemLink = "Document No."=FIELD("No.");
+                        DataItemLink = "Document No." = FIELD("No.");
                         DataItemLinkReference = "Transfer Header";
-                        DataItemTableView = SORTING("Document No.", "Line No.")WHERE("Derived From Line No."=CONST(0));
+                        DataItemTableView = SORTING("Document No.", "Line No.") WHERE("Derived From Line No." = CONST(0));
 
                         column(ItemNo_TransLine; "Item No.")
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(Desc_TransLine; Description)
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(Qty_TransLine; Quantity)
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(UOM_TransLine; "Unit of Measure Code")
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(Qty_TransLineShipped; "Quantity Shipped")
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(QtyReceived_TransLine; "Quantity Received")
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(TransFromBinCode_TransLine; "Transfer-from Bin Code")
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(TransToBinCode_TransLine; "Transfer-To Bin Code")
                         {
-                        IncludeCaption = true;
+                            IncludeCaption = true;
                         }
                         column(LineNo_TransLine; "Line No.")
                         {
@@ -210,7 +213,7 @@ report 70222 "ADES_Transfer Order - AD - P"
                         }
                         dataitem(DimensionLoop2; "Integer")
                         {
-                            DataItemTableView = SORTING(Number)WHERE(Number=FILTER(1..));
+                            DataItemTableView = SORTING(Number) WHERE(Number = FILTER(1 ..));
 
                             column(DimText2; DimText)
                             {
@@ -228,18 +231,21 @@ report 70222 "ADES_Transfer Order - AD - P"
                                 end
                                 else if not Continue then CurrReport.Break();
                                 Clear(DimText);
-                                Continue:=false;
-                                repeat OldDimText:=DimText;
-                                    if DimText = '' then DimText:=StrSubstNo('%1 - %2', DimSetEntry2."Dimension Code", DimSetEntry2."Dimension Value Code")
+                                Continue := false;
+                                repeat
+                                    OldDimText := DimText;
+                                    if DimText = '' then
+                                        DimText := StrSubstNo('%1 - %2', DimSetEntry2."Dimension Code", DimSetEntry2."Dimension Value Code")
                                     else
-                                        DimText:=StrSubstNo('%1; %2 - %3', DimText, DimSetEntry2."Dimension Code", DimSetEntry2."Dimension Value Code");
-                                    if StrLen(DimText) > MaxStrLen(OldDimText)then begin
-                                        DimText:=OldDimText;
-                                        Continue:=true;
+                                        DimText := StrSubstNo('%1; %2 - %3', DimText, DimSetEntry2."Dimension Code", DimSetEntry2."Dimension Value Code");
+                                    if StrLen(DimText) > MaxStrLen(OldDimText) then begin
+                                        DimText := OldDimText;
+                                        Continue := true;
                                         exit;
                                     end;
                                 until DimSetEntry2.Next = 0;
                             end;
+
                             trigger OnPreDataItem()
                             begin
                                 if not ShowInternalInfo then CurrReport.Break();
@@ -253,8 +259,8 @@ report 70222 "ADES_Transfer Order - AD - P"
                     dataitem("Inventory Comment Line"; "Inventory Comment Line")
                     {
                         DataItemLinkReference = "Transfer Header";
-                        DataItemTableView = where("Document Type"=CONST("Transfer Order"));
-                        DataItemLink = "No."=FIELD("No.");
+                        DataItemTableView = where("Document Type" = CONST("Transfer Order"));
+                        DataItemLink = "No." = FIELD("No.");
 
                         column(Comment_InventoryCommentLine__; Comment)
                         {
@@ -267,16 +273,17 @@ report 70222 "ADES_Transfer Order - AD - P"
                 trigger OnAfterGetRecord()
                 begin
                     if Number > 1 then begin
-                        CopyText:=Text000;
-                        OutputNo+=1;
+                        CopyText := Text000;
+                        OutputNo += 1;
                     end;
                 end;
+
                 trigger OnPreDataItem()
                 begin
-                    NoOfLoops:=Abs(NoOfCopies) + 1;
-                    CopyText:='';
+                    NoOfLoops := Abs(NoOfCopies) + 1;
+                    CopyText := '';
                     SetRange(Number, 1, NoOfLoops);
-                    OutputNo:=1;
+                    OutputNo := 1;
                 end;
             }
             trigger OnAfterGetRecord()
@@ -284,7 +291,7 @@ report 70222 "ADES_Transfer Order - AD - P"
                 DimSetEntry1.SetRange("Dimension Set ID", "Dimension Set ID");
                 FormatAddr.TransferHeaderTransferFrom(TransferFromAddr, "Transfer Header");
                 FormatAddr.TransferHeaderTransferTo(TransferToAddr, "Transfer Header");
-                if not ShipmentMethod.Get("Shipment Method Code")then ShipmentMethod.Init();
+                if not ShipmentMethod.Get("Shipment Method Code") then ShipmentMethod.Init();
             end;
         }
     }
@@ -321,8 +328,8 @@ report 70222 "ADES_Transfer Order - AD - P"
     }
     labels
     {
-    PostingDateCaption='Posting Date';
-    ShptMethodDescCaption='Shipment Method';
+        PostingDateCaption = 'Posting Date';
+        ShptMethodDescCaption = 'Shipment Method';
     }
     trigger OnPreReport()
     begin
@@ -330,26 +337,28 @@ report 70222 "ADES_Transfer Order - AD - P"
         CompanyInfo.CalcFields(Picture);
         FormatAddr.Company(CompanyAddr, CompanyInfo);
     end;
-    var Text000: Label 'COPY';
-    Text001: Label 'Transfer Order %1';
-    Text002: Label 'Page %1';
-    ShipmentMethod: Record "Shipment Method";
-    DimSetEntry1: Record "Dimension Set Entry";
-    DimSetEntry2: Record "Dimension Set Entry";
-    FormatAddr: Codeunit "Format Address";
-    TransferFromAddr: array[8]of Text[100];
-    TransferToAddr: array[8]of Text[100];
-    NoOfCopies: Integer;
-    NoOfLoops: Integer;
-    CopyText: Text[30];
-    DimText: Text[120];
-    OldDimText: Text[75];
-    ShowInternalInfo: Boolean;
-    Continue: Boolean;
-    OutputNo: Integer;
-    HdrDimensionsCaptionLbl: Label 'Header Dimensions';
-    LineDimensionsCaptionLbl: Label 'Line Dimensions';
-    TransferOrderNoCaptionLbl: Label 'Transfer Order No.';
-    CompanyInfo: Record "Company Information";
-    CompanyAddr: array[8]of Text[50];
+
+    var
+        Text000: Label 'COPY';
+        Text001: Label 'Transfer Order %1';
+        Text002: Label 'Page %1';
+        ShipmentMethod: Record "Shipment Method";
+        DimSetEntry1: Record "Dimension Set Entry";
+        DimSetEntry2: Record "Dimension Set Entry";
+        FormatAddr: Codeunit "Format Address";
+        TransferFromAddr: array[8] of Text[100];
+        TransferToAddr: array[8] of Text[100];
+        NoOfCopies: Integer;
+        NoOfLoops: Integer;
+        CopyText: Text[30];
+        DimText: Text[120];
+        OldDimText: Text[75];
+        ShowInternalInfo: Boolean;
+        Continue: Boolean;
+        OutputNo: Integer;
+        HdrDimensionsCaptionLbl: Label 'Header Dimensions';
+        LineDimensionsCaptionLbl: Label 'Line Dimensions';
+        TransferOrderNoCaptionLbl: Label 'Transfer Order No.';
+        CompanyInfo: Record "Company Information";
+        CompanyAddr: array[8] of Text[50];
 }

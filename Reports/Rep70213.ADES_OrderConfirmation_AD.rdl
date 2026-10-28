@@ -3362,7 +3362,7 @@ Cstr(Fields!DueDate_SalesHeader__.Value), 1)</Hidden>
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>6.5845cm</Height>
+          <Height>5.79075cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -3386,8 +3386,8 @@ Cstr(Fields!DueDate_SalesHeader__.Value), 1)</Hidden>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>6.0845cm</Top>
-                  <Left>13.5787cm</Left>
+                  <Top>5.29075cm</Top>
+                  <Left>13.60688cm</Left>
                   <Height>0.5cm</Height>
                   <Width>5.28701cm</Width>
                   <Style>
@@ -3415,8 +3415,8 @@ Cstr(Fields!DueDate_SalesHeader__.Value), 1)</Hidden>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>5.5845cm</Top>
-                  <Left>0.00004cm</Left>
+                  <Top>4.79075cm</Top>
+                  <Left>0.02822cm</Left>
                   <Height>0.5cm</Height>
                   <Width>18.86567cm</Width>
                   <ZIndex>1</ZIndex>
@@ -3598,8 +3598,8 @@ Cstr(Fields!DueDate_SalesHeader__.Value), 1)</Hidden>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>6.0845cm</Top>
-                  <Left>0.02822cm</Left>
+                  <Top>5.29075cm</Top>
+                  <Left>0.0564cm</Left>
                   <Height>0.5cm</Height>
                   <Width>18.80662cm</Width>
                   <ZIndex>6</ZIndex>
@@ -3970,61 +3970,9 @@ Cstr(Fields!DueDate_SalesHeader__.Value), 1)</Hidden>
                     </Border>
                   </Style>
                 </Rectangle>
-                <Textbox Name="Textbox78">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>Please see link for our Terms &amp; Conditions to our website (</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                        <TextRun>
-                          <Value>https://envirosystems.com.au/terms-conditions/</Value>
-                          <MarkupType>HTML</MarkupType>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                            <Color>Blue</Color>
-                          </Style>
-                        </TextRun>
-                        <TextRun>
-                          <Value>)</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox78</rd:DefaultName>
-                  <Top>4.979cm</Top>
-                  <Left>0cm</Left>
-                  <Height>0.5cm</Height>
-                  <Width>18.86572cm</Width>
-                  <ZIndex>15</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <VerticalAlign>Middle</VerticalAlign>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Height>6.5845cm</Height>
+              <Height>5.79075cm</Height>
               <Width>18.92216cm</Width>
               <Visibility>
                 <Hidden>=IIF(Reportitems!PrintFooter.Value,FALSE,TRUE)</Hidden>

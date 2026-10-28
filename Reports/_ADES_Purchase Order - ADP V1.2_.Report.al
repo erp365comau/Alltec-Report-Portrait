@@ -17,7 +17,7 @@ report 70215 "ADES_Purchase Order - ADP V1.2"
     // Austral Sugeevan 07/08/2020 >>> RTC Layout Mods
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70215.ADES_PurchaseOrder_AD_PV1.2.rdl';
-    Caption = 'Purchase Order - AD';
+    Caption = 'Purchase Order -ERP365';
 
     dataset
     {

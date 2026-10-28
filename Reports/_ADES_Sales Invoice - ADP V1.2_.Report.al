@@ -13,7 +13,7 @@ report 70206 "ADES_Sales Invoice - ADP V1.2"
     // Austral Sugeevan 24/07/2020 >>> Mods
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70206.ADES_SalesInvoice_AD_P_V1.2.rdl';
-    Caption = 'Sales Invoice - AD';
+    Caption = 'Sales Invoice -ERP365';
     Permissions = TableData "Sales Shipment Buffer" = rimd;
 
     dataset

@@ -15,7 +15,7 @@ report 70216 "Sales - Cr. Memo - ADP - V1.2"
     // J14924 20201002 LK - LAYOUT CHANGES
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70216.ADES_SalesCrMemo_AD_PV1.2.rdl';
-    Caption = 'Sales - Credit Memo - AD';
+    Caption = 'Sales - Credit Memo -ERP365';
     Permissions = TableData "Sales Shipment Buffer" = rimd;
 
     dataset

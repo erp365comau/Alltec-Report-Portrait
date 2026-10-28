@@ -3,7 +3,7 @@ report 70225 "ADES_Item Register - Qty. - AD"
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70225.ADES_ItemRegister_Quantity_AD.rdl';
     ApplicationArea = Basic, Suite;
-    Caption = 'Item Register - Quantity - AD';
+    Caption = 'Item Register - Quantity -ERP365';
     UsageCategory = ReportsAndAnalysis;
 
     dataset
@@ -50,35 +50,36 @@ report 70225 "ADES_Item Register - Qty. - AD"
                 }
                 column(EntryType_ItemLedgEntry; "Entry Type")
                 {
-                IncludeCaption = true;
+                    IncludeCaption = true;
                 }
                 column(ItemNo_ItemLedgEntry; "Item No.")
                 {
-                IncludeCaption = true;
+                    IncludeCaption = true;
                 }
                 column(ItemDescription; ItemDescription)
                 {
                 }
                 column(Quantity_ItemLedgEntry; Quantity)
                 {
-                IncludeCaption = true;
+                    IncludeCaption = true;
                 }
                 column(EntryNo_ItemLedgEntry; "Entry No.")
                 {
-                IncludeCaption = true;
+                    IncludeCaption = true;
                 }
                 column(DocNo_ItemLedgEntry; "Document No.")
                 {
-                IncludeCaption = true;
+                    IncludeCaption = true;
                 }
                 trigger OnAfterGetRecord()
                 begin
                     //ItemDescription := Description;
                     //if ItemDescription = '' then begin
-                    if not Item.Get("Item No.")then Item.Init();
-                    ItemDescription:=Item.Description;
-                //end;
+                    if not Item.Get("Item No.") then Item.Init();
+                    ItemDescription := Item.Description;
+                    //end;
                 end;
+
                 trigger OnPreDataItem()
                 begin
                     SetRange("Entry No.", "Item Register"."From Entry No.", "Item Register"."To Entry No.");
@@ -100,14 +101,16 @@ report 70225 "ADES_Item Register - Qty. - AD"
     }
     trigger OnPreReport()
     begin
-        ItemRegFilter:="Item Register".GetFilters;
+        ItemRegFilter := "Item Register".GetFilters;
     end;
-    var Item: Record Item;
-    ItemRegFilter: Text;
-    ItemDescription: Text[100];
-    ItemRegQtyCaptionLbl: Label 'Item Register - Quantity';
-    CurrReportPageNoCaptionLbl: Label 'Page';
-    PostingDateCaptionLbl: Label 'Posting Date';
-    ItemDescriptionCaptionLbl: Label 'Description';
-    No_ItemRegisterCaptionLbl: Label 'Register No.';
+
+    var
+        Item: Record Item;
+        ItemRegFilter: Text;
+        ItemDescription: Text[100];
+        ItemRegQtyCaptionLbl: Label 'Item Register - Quantity';
+        CurrReportPageNoCaptionLbl: Label 'Page';
+        PostingDateCaptionLbl: Label 'Posting Date';
+        ItemDescriptionCaptionLbl: Label 'Description';
+        No_ItemRegisterCaptionLbl: Label 'Register No.';
 }
