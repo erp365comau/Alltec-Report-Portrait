@@ -1,13 +1,6 @@
-// ------------------------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License. See License.txt in the project root for license information.
-// ------------------------------------------------------------------------------------------------
 
 report 70228 "ADES_Purch. CR Adj Note - V1.0"
 {
-    // Standard copy of Microsoft report 407 "Purchase - Credit Memo", Base Application 28.5.
-    // Shown as "Purchase - CR/Adj Note" under the en-AU localization.
-    // Dataset and layout cloned verbatim; customise from here.
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70228.ADES_PurchaseCRAdjNote_AD_P_V1.0.rdl';
     Caption = 'Purchase - CR/Adj Note -ERP365';

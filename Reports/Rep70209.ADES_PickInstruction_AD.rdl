@@ -24,7 +24,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>5.80738cm</Height>
+                  <Height>7.00738cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -491,7 +491,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!LocationCode_SalesLine.Value</Value>
+                                                    <Value>=IIF(Fields!IsCommentLine_SalesLine.Value, "", Fields!LocationCode_SalesLine.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -524,7 +524,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!ShipmentDate_SalesLine.Value</Value>
+                                                    <Value>=IIF(Fields!IsCommentLine_SalesLine.Value, "", Fields!ShipmentDate_SalesLine.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -557,7 +557,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!Quantity_SalesLine.Value</Value>
+                                                    <Value>=IIF(Fields!IsCommentLine_SalesLine.Value, Nothing, Fields!Quantity_SalesLine.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -590,7 +590,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!UnitOfMeasure_SalesLine.Value</Value>
+                                                    <Value>=IIF(Fields!IsCommentLine_SalesLine.Value, "", Fields!UnitOfMeasure_SalesLine.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -623,7 +623,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!QuantityToShip_SalesLine.Value</Value>
+                                                    <Value>=IIF(Fields!IsCommentLine_SalesLine.Value, Nothing, Fields!QuantityToShip_SalesLine.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -4120,7 +4120,8 @@ Cstr(Fields!ABN_CompanyInfo__.Value) + Chr(177) +
 Cstr(Fields!OrderPickingListCaption2__.Value) + Chr(177) +
 Cstr(Fields!OrderDate_SalesHeader__.Value) + Chr(177) +
 Cstr(Fields!ExternalDocumentNo_SalesHeader__.Value) + Chr(177) +
-Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
+Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value) + Chr(177) +
+Cstr(Fields!WorkDescriptionText.Value), 1)</Hidden>
                                             </Visibility>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
@@ -4254,7 +4255,6 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                                               <PaddingRight>2pt</PaddingRight>
                                             </Style>
                                           </Textbox>
-                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -4418,7 +4418,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Height>5.80738cm</Height>
+            <Height>7.00738cm</Height>
             <Width>27.9973cm</Width>
             <Style>
               <Border>
@@ -4427,13 +4427,13 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>5.80738cm</Height>
+        <Height>7.00738cm</Height>
         <Style />
       </Body>
       <Width>28.05022cm</Width>
       <Page>
         <PageHeader>
-          <Height>6.35767cm</Height>
+          <Height>5.48455cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -4515,7 +4515,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>4.42852cm</Top>
+              <Top>3.47602cm</Top>
               <Left>14.5228cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.94849cm</Width>
@@ -4546,7 +4546,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>4.42852cm</Top>
+              <Top>3.47602cm</Top>
               <Left>17.47129cm</Left>
               <Height>15.79949pt</Height>
               <Width>10.52602cm</Width>
@@ -4578,7 +4578,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>3.87115cm</Top>
+              <Top>2.91865cm</Top>
               <Left>17.47129cm</Left>
               <Height>15.79949pt</Height>
               <Width>10.52602cm</Width>
@@ -4610,7 +4610,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>4.98589cm</Top>
+              <Top>4.03339cm</Top>
               <Left>17.47129cm</Left>
               <Height>15.79949pt</Height>
               <Width>10.52602cm</Width>
@@ -4639,7 +4639,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.87115cm</Top>
+              <Top>2.91865cm</Top>
               <Left>14.5228cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.94849cm</Width>
@@ -4668,7 +4668,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>4.98589cm</Top>
+              <Top>4.03339cm</Top>
               <Left>14.5228cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.94849cm</Width>
@@ -4687,7 +4687,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
               <MIMEType>image/bmp</MIMEType>
               <Sizing>FitProportional</Sizing>
               <Top>0.34688cm</Top>
-              <Height>2.75cm</Height>
+              <Height>2.115cm</Height>
               <Width>8.882cm</Width>
               <ZIndex>8</ZIndex>
               <DataElementOutput>NoOutput</DataElementOutput>
@@ -4714,7 +4714,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>3.59597cm</Top>
+              <Top>2.64347cm</Top>
               <Height>19.99955pt</Height>
               <Width>12.29299cm</Width>
               <ZIndex>9</ZIndex>
@@ -4741,7 +4741,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>4.30151cm</Top>
+              <Top>3.34901cm</Top>
               <Height>12pt</Height>
               <Width>12.29299cm</Width>
               <ZIndex>10</ZIndex>
@@ -4768,7 +4768,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>5.14818cm</Top>
+              <Top>4.19568cm</Top>
               <Height>12pt</Height>
               <Width>12.29299cm</Width>
               <ZIndex>11</ZIndex>
@@ -4795,7 +4795,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>5.57151cm</Top>
+              <Top>4.61901cm</Top>
               <Height>12pt</Height>
               <Width>12.29299cm</Width>
               <ZIndex>12</ZIndex>
@@ -4822,7 +4822,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>4.72484cm</Top>
+              <Top>3.77234cm</Top>
               <Height>12pt</Height>
               <Width>12.29299cm</Width>
               <ZIndex>13</ZIndex>
@@ -4881,7 +4881,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>3.31378cm</Top>
+              <Top>2.36128cm</Top>
               <Left>17.47129cm</Left>
               <Height>15.79949pt</Height>
               <Width>10.52602cm</Width>
@@ -4911,7 +4911,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.31378cm</Top>
+              <Top>2.36128cm</Top>
               <Left>14.5228cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.94849cm</Width>
@@ -4943,7 +4943,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>5.54326cm</Top>
+              <Top>4.59076cm</Top>
               <Left>17.47129cm</Left>
               <Height>15.79949pt</Height>
               <Width>10.52602cm</Width>
@@ -4973,7 +4973,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>5.54326cm</Top>
+              <Top>4.59076cm</Top>
               <Left>14.5228cm</Left>
               <Height>15.79949pt</Height>
               <Width>2.94849cm</Width>
@@ -5007,7 +5007,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Constant">Terms &amp; Conditions of Sale:</Value>
+                          <Value EvaluationMode="Constant">Note:</Value>
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
@@ -5026,7 +5026,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                   <Top>0cm</Top>
                   <Left>0cm</Left>
                   <Height>0.49573cm</Height>
-                  <Width>6.38814cm</Width>
+                  <Width>21.5944cm</Width>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5045,7 +5045,7 @@ Cstr(Fields!ADES_SaleTermsandConditions_SalesSetup__.Value), 1)</Hidden>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>=Code.GetData(13,1)</Value>
+                          <Value>=Code.GetData(14,1)</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>6.5pt</FontSize>
@@ -5784,6 +5784,9 @@ End Function
         <Field Name="ExternalDocumentNo_SalesHeader__">
           <DataField>ExternalDocumentNo_SalesHeader__</DataField>
         </Field>
+        <Field Name="WorkDescriptionText">
+          <DataField>WorkDescriptionText</DataField>
+        </Field>
         <Field Name="LineNo_SalesLine">
           <DataField>LineNo_SalesLine</DataField>
         </Field>
@@ -5837,6 +5840,9 @@ End Function
         </Field>
         <Field Name="UOMCaption__">
           <DataField>UOMCaption__</DataField>
+        </Field>
+        <Field Name="IsCommentLine_SalesLine">
+          <DataField>IsCommentLine_SalesLine</DataField>
         </Field>
         <Field Name="No_AssemblyLine">
           <DataField>No_AssemblyLine</DataField>

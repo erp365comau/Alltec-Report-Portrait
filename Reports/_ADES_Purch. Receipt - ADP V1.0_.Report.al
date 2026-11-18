@@ -1,13 +1,7 @@
-// ------------------------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License. See License.txt in the project root for license information.
-// ------------------------------------------------------------------------------------------------
 
 
 report 70229 "ADES_Purch. Receipt - ADP V1.0"
 {
-    // Standard copy of Microsoft report 408 "Purchase - Receipt", Base Application 28.5.
-    // Dataset and layout cloned verbatim; customise from here.
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70229.ADES_PurchaseReceipt_AD_P_V1.0.rdl';
     Caption = 'Purchase - Receipt -ERP365';

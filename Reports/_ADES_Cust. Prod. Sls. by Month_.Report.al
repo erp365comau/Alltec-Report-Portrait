@@ -1,6 +1,5 @@
 report 70203 "ADES_Cust. Prod. Sls. by Month"
 {
-    // Austral Sugeevan 20/01/2021 >>> Designed Report
     CaptionML = ENU = 'Customer Product Sales Revenue and Margin by Month', ENA = 'Customer Product Sales Revenue and Margin by Month';
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70203.ADES_CustomerProductSalesRevenueandMarginbyMonth.rdl';
@@ -11,7 +10,7 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
     {
         dataitem("Sales Invoice Line"; "Sales Invoice Line")
         {
-            DataItemTableView = WHERE(Type=CONST(Item));
+            DataItemTableView = WHERE(Type = CONST(Item));
             RequestFilterFields = "No.", "Sell-to Customer No.", "Document No.", "ADES_Salesperson Code", "Posting Date";
 
             column(No_SalesInvoiceLine__; "No.")
@@ -143,7 +142,7 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
             column(Months_6__; Months[6])
             {
             }
-            column(StartingDate__;'Starting Date: ' + FORMAT(StartingDate))
+            column(StartingDate__; 'Starting Date: ' + FORMAT(StartingDate))
             {
             }
             trigger OnAfterGetRecord();
@@ -151,10 +150,10 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
                 ValueEntry: Record 5802;
                 SalesInvoiceLine: Record 113;
             begin
-                IF NOT TempInvtBuffer.GET("No.", '', 0, '', '', "Sell-to Customer No.", '')THEN BEGIN
+                IF NOT TempInvtBuffer.GET("No.", '', 0, '', '', "Sell-to Customer No.", '') THEN BEGIN
                     TempInvtBuffer.INIT;
-                    TempInvtBuffer."Item No.":="No.";
-                    TempInvtBuffer."Lot No.":="Sell-to Customer No.";
+                    TempInvtBuffer."Item No." := "No.";
+                    TempInvtBuffer."Lot No." := "Sell-to Customer No.";
                     //TempInvtBuffer."Serial No." := "Document No.";
                     TempInvtBuffer.INSERT;
                 END
@@ -162,7 +161,7 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
                     CurrReport.SKIP;
                 CLEAR(SalesInvoiceHeader);
                 CLEAR(SalesPerson);
-                IF SalesInvoiceHeader.GET("Document No.")THEN IF SalesPerson.GET(SalesInvoiceHeader."Salesperson Code")THEN;
+                IF SalesInvoiceHeader.GET("Document No.") THEN IF SalesPerson.GET(SalesInvoiceHeader."Salesperson Code") THEN;
                 /* CLEAR(SalesRevenue);
                 SalesInvoiceLine.SETRANGE("Document No.", "Document No.");
                 SalesInvoiceLine.SETRANGE("No.", "No.");
@@ -180,7 +179,7 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
                 Clear(GPAmount);
                 Clear(InvoicedQty);
                 Clear(AvgPrice);
-                for i:=ArrayLen(SalesRevenue)downto 1 do begin
+                for i := ArrayLen(SalesRevenue) downto 1 do begin
                     ValueEntry.SETCURRENTKEY("Item No.", "Posting Date");
                     //ValueEntry.SETRANGE("Document No.", "Document No.");
                     ValueEntry.SETRANGE("Item No.", "No.");
@@ -192,9 +191,11 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
                         Message(Format(Dates[i]) + '..' + Format(EndDates[i]));
                         Error(Format(ValueEntry.Count));
                     end; */
-                    IF ValueEntry.FINDSET THEN REPEAT InvoicedQty[i]+=-ValueEntry."Invoiced Quantity";
-                            SalesRevenue[i]+=ValueEntry."Sales Amount (Actual)";
-                            CostAmount[i]+=-ValueEntry."Cost Amount (Actual)";
+                    IF ValueEntry.FINDSET THEN
+                        REPEAT
+                            InvoicedQty[i] += -ValueEntry."Invoiced Quantity";
+                            SalesRevenue[i] += ValueEntry."Sales Amount (Actual)";
+                            CostAmount[i] += -ValueEntry."Cost Amount (Actual)";
                         UNTIL ValueEntry.NEXT = 0;
                     /* Clear(ValueEntry);
                     CLEAR(CostAmount);                
@@ -206,12 +207,13 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
                         REPEAT
                             CostAmount += -ValueEntry."Cost Amount (Actual)";
                         UNTIL ValueEntry.NEXT = 0; */
-                    GPAmount[i]:=SalesRevenue[i] - CostAmount[i];
-                //SalesRevenueTotal += SalesRevenue;
-                //CostAmountTotal += Co
-                //GPAmountTotal
+                    GPAmount[i] := SalesRevenue[i] - CostAmount[i];
+                    //SalesRevenueTotal += SalesRevenue;
+                    //CostAmountTotal += Co
+                    //GPAmountTotal
                 end;
             end;
+
             trigger OnPreDataItem()
             begin
                 //SetRange("Posting Date", Dates[6], CalcDate('1M', Dates[1]) - 1);
@@ -236,11 +238,6 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
                         CaptionML = ENU = 'Starting Date', ENA = 'Starting Date';
                         ApplicationArea = All;
                     }
-                /* field(ShowError; ShowError)
-                    {
-                        CaptionML = ENU = 'Show Error', ENA = 'Show Error';
-                        ApplicationArea = All;
-                    } */
                 }
             }
         }
@@ -256,56 +253,74 @@ report 70203 "ADES_Cust. Prod. Sls. by Month"
         if StartingDate = 0D then Error('Starting Date cannot be blank.');
         CalcDates;
     end;
-    var SalesInvoiceHeader: Record 112;
-    SalesPerson: Record 13;
-    CostAmount: array[6]of Decimal;
-    SalesRevenue: array[6]of Decimal;
-    GPAmount: array[6]of Decimal;
-    SalesRevenueTotal: Decimal;
-    CostAmountTotal: Decimal;
-    GPAmountTotal: Decimal;
-    TempInvtBuffer: Record 307 temporary;
-    StartingDate: Date;
-    Dates: array[6]of Date;
-    Months: array[6]of Text[30];
-    i: Integer;
-    InvoicedQty: array[6]of Decimal;
-    AvgPrice: array[6]of Decimal;
-    ShowError: Boolean;
-    EndDates: array[6]of Date;
+
+    var
+        SalesInvoiceHeader: Record 112;
+        SalesPerson: Record 13;
+        CostAmount: array[6] of Decimal;
+        SalesRevenue: array[6] of Decimal;
+        GPAmount: array[6] of Decimal;
+        SalesRevenueTotal: Decimal;
+        CostAmountTotal: Decimal;
+        GPAmountTotal: Decimal;
+        TempInvtBuffer: Record 307 temporary;
+        StartingDate: Date;
+        Dates: array[6] of Date;
+        Months: array[6] of Text[30];
+        i: Integer;
+        InvoicedQty: array[6] of Decimal;
+        AvgPrice: array[6] of Decimal;
+        ShowError: Boolean;
+        EndDates: array[6] of Date;
+
     local procedure CalcDates()
     var
         MonthL: Integer;
         YearL: Integer;
     begin
-        MonthL:=Date2DMY(StartingDate, 2);
-        YearL:=Date2DMY(StartingDate, 3);
-        Dates[1]:=DMY2Date(1, MonthL, YearL);
-        EndDates[1]:=CalcDate('1M', Dates[1]) - 1;
-        Months[1]:=GetMonthYear(MonthL, YearL);
-        for i:=2 to ArrayLen(Dates)do begin
-            Dates[i]:=CalcDate('-1M', Dates[i - 1]);
-            EndDates[i]:=CalcDate('1M', Dates[i]) - 1;
-            if i <= ArrayLen(Months)then begin
-                MonthL:=Date2DMY(Dates[i], 2);
-                YearL:=Date2DMY(Dates[i], 3);
-                Months[i]:=GetMonthYear(MonthL, YearL);
+        MonthL := Date2DMY(StartingDate, 2);
+        YearL := Date2DMY(StartingDate, 3);
+        Dates[1] := DMY2Date(1, MonthL, YearL);
+        EndDates[1] := CalcDate('1M', Dates[1]) - 1;
+        Months[1] := GetMonthYear(MonthL, YearL);
+        for i := 2 to ArrayLen(Dates) do begin
+            Dates[i] := CalcDate('-1M', Dates[i - 1]);
+            EndDates[i] := CalcDate('1M', Dates[i]) - 1;
+            if i <= ArrayLen(Months) then begin
+                MonthL := Date2DMY(Dates[i], 2);
+                YearL := Date2DMY(Dates[i], 3);
+                Months[i] := GetMonthYear(MonthL, YearL);
             end;
         end;
     end;
-    local procedure GetMonthYear(Month: Integer; Year: Integer): Text[30]begin
-        case month of 1: exit('January ' + Format(Year));
-        2: exit('February ' + Format(Year));
-        3: exit('March ' + Format(Year));
-        4: exit('April ' + Format(Year));
-        5: exit('May ' + Format(Year));
-        6: exit('June ' + Format(Year));
-        7: exit('July ' + Format(Year));
-        8: exit('August ' + Format(Year));
-        9: exit('September ' + Format(Year));
-        10: exit('October ' + Format(Year));
-        11: exit('November ' + Format(Year));
-        12: exit('December ' + Format(Year));
+
+    local procedure GetMonthYear(Month: Integer; Year: Integer): Text[30]
+    begin
+        case month of
+            1:
+                exit('January ' + Format(Year));
+            2:
+                exit('February ' + Format(Year));
+            3:
+                exit('March ' + Format(Year));
+            4:
+                exit('April ' + Format(Year));
+            5:
+                exit('May ' + Format(Year));
+            6:
+                exit('June ' + Format(Year));
+            7:
+                exit('July ' + Format(Year));
+            8:
+                exit('August ' + Format(Year));
+            9:
+                exit('September ' + Format(Year));
+            10:
+                exit('October ' + Format(Year));
+            11:
+                exit('November ' + Format(Year));
+            12:
+                exit('December ' + Format(Year));
         end;
     end;
 }

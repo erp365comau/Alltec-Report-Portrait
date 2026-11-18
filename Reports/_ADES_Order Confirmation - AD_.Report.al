@@ -1,7 +1,5 @@
 report 70213 "ADES_Order Confirmation - AD"
 {
-    // Austral Sugeevan 12/07/2020 >>> Mods
-    // Austral Sugeevan 15/07/2020 >>> Added Bank Details in the Footer
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/Rep70213.ADES_OrderConfirmation_AD.rdl';
     Caption = 'Order Confirmation';

@@ -24,5 +24,21 @@ tableextension 70200 ADES_SalesInvoiceLineExt extends "Sales Invoice Line"
             CalcFormula = lookup(Item.Description where("No." = field("No.")));
             Editable = false;
         }
+        field(70203; "Total Cost"; Decimal)
+        {
+            CaptionML = ENU = 'Total Cost', ENA = 'Total Cost';
+            DataClassification = CustomerContent;
+            AutoFormatType = 1;
+            AutoFormatExpression = Rec.GetCurrencyCode();
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+        }
+        field(70204; "Margin %"; Decimal)
+        {
+            CaptionML = ENU = 'Margin %', ENA = 'Margin %';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+        }
     }
 }

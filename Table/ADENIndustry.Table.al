@@ -11,7 +11,7 @@ table 70200 ADENIndustry
             DataClassification = ToBeClassified;
             CaptionML = ENA = 'Code', ENU = 'Code';
         }
-        field(50001; "EN Description"; code[10])
+        field(50001; "EN Description"; code[50])
         {
             DataClassification = ToBeClassified;
             CaptionML = ENA = 'Description', ENU = 'Description';

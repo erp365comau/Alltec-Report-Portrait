@@ -77,10 +77,13 @@ report 70209 "ADES_Pick Instruction - AD"
                 column(ExternalDocumentNo_SalesHeader__; "External Document No.")
                 {
                 }
+                column(WorkDescriptionText; WorkDescriptionText)
+                {
+                }
                 dataitem("Sales Line"; "Sales Line")
                 {
                     DataItemLink = "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
-                    DataItemTableView = SORTING("Document Type", "Document No.", "Line No.") WHERE(Type = CONST(Item));
+                    DataItemTableView = SORTING("Document Type", "Document No.", "Line No.") WHERE(Type = FILTER(" " | Item));
 
                     column(LineNo_SalesLine; "Line No.")
                     {
@@ -133,6 +136,9 @@ report 70209 "ADES_Pick Instruction - AD"
                     column(UOMCaption__; UOMCaption)
                     {
                     }
+                    column(IsCommentLine_SalesLine; IsCommentLine)
+                    {
+                    }
                     dataitem("Assembly Line"; "Assembly Line")
                     {
                         DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
@@ -183,6 +189,7 @@ report 70209 "ADES_Pick Instruction - AD"
                     var
                         AssembleToOrderLink: Record "Assemble-to-Order Link";
                     begin
+                        IsCommentLine := Type = Type::" ";
                         AssembleToOrderLink.Reset();
                         AssembleToOrderLink.SetCurrentKey(Type, "Document Type", "Document No.", "Document Line No.");
                         AssembleToOrderLink.SetRange(Type, AssembleToOrderLink.Type::Sale);
@@ -210,6 +217,27 @@ report 70209 "ADES_Pick Instruction - AD"
                     {
                     }
                 }
+
+                trigger OnAfterGetRecord()
+                var
+                    TypeHelper: Codeunit "Type Helper";
+                    WorkDescriptionInstream: InStream;
+                    WorkDescriptionLine: Text;
+                begin
+                    CalcFields("Work Description");
+                    WorkDescriptionText := '';
+                    if not "Work Description".HasValue() then
+                        exit;
+                    "Work Description".CreateInStream(WorkDescriptionInstream, TEXTENCODING::UTF8);
+                    while not WorkDescriptionInstream.EOS do begin
+                        WorkDescriptionLine := TypeHelper.ReadAsTextWithSeparator(WorkDescriptionInstream, TypeHelper.LFSeparator());
+                        if WorkDescriptionLine <> '' then
+                            if WorkDescriptionText = '' then
+                                WorkDescriptionText := WorkDescriptionLine
+                            else
+                                WorkDescriptionText += ' ' + WorkDescriptionLine;
+                    end;
+                end;
             }
             trigger OnPreDataItem()
             begin
@@ -284,6 +312,8 @@ report 70209 "ADES_Pick Instruction - AD"
         QtytoShipCaption: textconst ENU = 'Quantity To Ship', ENA = 'Quantity To Ship';
         UOMCaption: textconst ENU = 'Unit of Measure', ENA = 'Unit of Measure';
         SalesSetup: Record "Sales & Receivables Setup";
+        WorkDescriptionText: Text;
+        IsCommentLine: Boolean;
 
     local procedure GetUOM(UOMCode: Code[10]): Text
     var
